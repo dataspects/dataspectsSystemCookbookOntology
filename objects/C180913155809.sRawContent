@@ -1,0 +1,9 @@
+{{Recipe
+|HasEntityTitle=Restore a dataspects system Duplicity backup onto a dataspects Kubernetes cluster
+}}
+
+== Requirements ==
+
+* {{Property|Requires|SystemComponent "dataspects Kubernetes cluster"}}
+* {{Property|Requires|SystemComponent "dataspects system Duplicity backup"}}
+* {{Property|Requires|SystemComponent "User GnuPG keys"}}
