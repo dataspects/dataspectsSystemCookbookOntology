@@ -1,0 +1,7 @@
+{{Recipe
+|HasEntityTitle=Set up a dataspects Kubernetes cluster on a local VM as a Minikube (https://kubernetes.io/docs/setup/minikube/)
+}}
+
+== Installation ==
+
+See https://github.com/dataspects/dataspectsSystem/blob/master/ansible_playbooks/install-minikube.yml

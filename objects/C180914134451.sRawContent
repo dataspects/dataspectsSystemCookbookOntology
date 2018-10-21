@@ -1,0 +1,13 @@
+{{SystemComponent
+|HasEntityTitle=dataspects Kubernetes cluster
+}}
+
+== Understanding ==
+
+== Setup ==
+
+There are 3 ways to set up a dataspects Kubernetes cluster:
+
+# [[C180914135850]]
+# Set up a dataspects Kubernetes cluster on an intranet
+# Set up a dataspects Kubernetes cluster in the cloud using https://stackpoint.io

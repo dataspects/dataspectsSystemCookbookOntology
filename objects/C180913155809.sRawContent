@@ -5,5 +5,5 @@
 == Requirements ==
 
 * {{Property|Requires|SystemComponent "dataspects Kubernetes cluster"}}
-* {{Property|Requires|SystemComponent "dataspects system Duplicity backup"}}
+* {{Property|Requires|SystemComponent "dataspectsSystem Duplicity backup"}}
 * {{Property|Requires|SystemComponent "User GnuPG keys"}}
