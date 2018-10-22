@@ -1,0 +1,16 @@
+{{Recipe
+|HasEntityTitle=Add draw.io diagrams hosted on Google Drive to a dataspects DSKMF Elasticsearch index
+}}
+
+# In the Google Drive file list right-click a draw.io file to be added to the index
+# Click Advanced in the lower right corner
+# Next to "Private - Only you have access" click "Change..."
+# Select "On - Public on the web"
+# Open the draw.io file
+# Select File > Embedd > HTML
+# Select "Public URL of the diagram"
+# Uncheck "Layers" and "Lightbox"
+# Click "Create"
+# Save HTML in a file to be indexed by Dataspects::drawIoIndexer
+
+IMPORTANT: Updates of the original draw.io file on Google Drive will be propagated to all locations where the HTML has been embedded!
