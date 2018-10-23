@@ -2,9 +2,13 @@ dataspectsSystem is a '''knowledge management system''' based on
 * a [http://localhost:20107/search search engine] that can [https://dataspects.com/dataspects-search index any kind of information source]
 * a '''wiki''' used as the primary platform to '''manage knowledge as connected topics''' organized by the principles of [https://everypageispageone.com/the-book/ Every Page is Page One]
 
-== EPPO ==
+== How this cookbook is organized ==
 
-* [[Topic Types]]
+Every piece of knowledge (regarding orientation, understanding, subjects, workflows and procedures) is of a distinct [[Topic Types|topic type]]:
+
+{{#ask:[[Category:TopicType]]
+|format=list
+}}
 
 == How to use dataspectsSystems ==
 
@@ -27,3 +31,5 @@ dataspects Docker images provide system components at a level of abstraction tha
 == How to develop dataspectsSystems ==
 
 [[Category:Topic]]
+
+__NOTOC__
