@@ -1,5 +1,5 @@
 {{Recipe
-|HasEntityTitle=Add draw.io diagrams hosted on Google Drive to a dataspects DSKMF Elasticsearch index
+|HasEntityTitle=Add draw.io diagrams hosted on Google Drive to a dataspects DSKMF Elastic index
 }}
 
 # In the Google Drive file list right-click a draw.io file to be added to the index

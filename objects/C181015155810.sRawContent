@@ -1,0 +1,10 @@
+{{Recipe
+|HasEntityTitle=Extract/export a set of pages from a SMW into a directory (git repository)
+}}
+
+== Requirements ==
+
+* A running [https://docs.docker.com/engine/reference/commandline/dockerd/ Docker Daemon]
+* The {{DomainTerm|dataspects_app Docker image|dataspects}}
+* A profiles.yml file
+* A {{DomainTerm|dataspects workload script|dataspects}}

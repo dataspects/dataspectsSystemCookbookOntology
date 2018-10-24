@@ -1,9 +1,29 @@
-{{Recipe
-|HasEntityTitle=Restore a dataspects system Duplicity backup onto a dataspects Kubernetes cluster
+{{Concept
+|HasEntityTitle=Controlled, faceted, multilateral, asynchronous, bidirectional synchronisation of multiple SMWs (CFMABS)
 }}
 
-== Requirements ==
+== CFMABS Idea and Rationale ==
 
-* {{Property|Requires|C180914134451}}
-* {{Property|Requires|C181023143327}}
-* {{Property|Requires|C181023143356}}
+We want to share terminological and assertional content between SMWs like this:
+
+# '''Controlled'''
+# '''Faceted'''
+# '''Multilateral''' (between more than 2 SMWs)
+# '''Asynchronous''' (content exchange can happen at any time in any order)
+# '''Bidirectional''' (no such thing as "master" SMWs)
+# '''Synchronisation'''
+
+in a way that is:
+
+# conscient
+# repeatable/idempotent
+# reusable
+# reversible/rollback
+# comprehensible/logged
+# supporting error recovery
+
+== Separation of concerns ==
+
+# SMW content is smartly exported/imported to/from text files into/from a folder by the dataspects app.
+#* Smart means that the SMWs, folders and pages (wikitext and metadata) involved remember all the information necessary to implement above mentioned "conscient, repeatable/idempotent, reusable, reversible, comprehensible/logged, supporting error recovery".
+# That folder is then put under [https://en.wikipedia.org/wiki/Comparison_of_version_control_software version control].

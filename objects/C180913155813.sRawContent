@@ -1,0 +1,9 @@
+{{Concept
+|HasEntityTitle=Text datatype
+|HasEntityKeyword=Elastic
+|HasEntityBlurb=Index content analyzing it.
+}}
+
+{{Property|HasElasticConceptType|Datatype}}
+
+* https://www.elastic.co/guide/en/Elastic/reference/current/text.html

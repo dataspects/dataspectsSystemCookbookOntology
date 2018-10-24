@@ -1,0 +1,9 @@
+{{Concept
+|HasEntityTitle=Keyword datatype
+|HasEntityKeyword=Elastic
+|HasEntityBlurb=Index content without analyzing it such as status or zip codes typically used for filtering, sorting and aggregations. Keyword fields are only searchable by their exact value.
+}}
+
+{{Property|HasElasticConceptType|Datatype}}
+
+* [https://www.elastic.co/guide/en/Elastic/reference/current/keyword.html Parameters]
