@@ -1,0 +1,22 @@
+{{Concept
+|HasEntityTitle=dataspectsSystem Containerized Setup
+}}
+
+A running dataspectsSystem consists of:
+
+* a running container platform (Docker Daemon)
+* a stack of '''containers''' (Docker) running on the container platform which can be coordinated/scheduled by a clustering solution (Kubernetes)
+* '''data locations''' where data is stored persistently (i.e. independent of containers), e.g. for data such as an Elasticsearch index, a MySQL database and files uploaded to a MediaWiki
+* '''networks''' wiring together containers and exposing ports for accessing dataspectsSystem services
+
+Building a dataspectsSystem consists of:
+
+* Starting the Docker Daemon (dockerd)
+* '''building''' container images from Dockerfiles (which makes the images available on the Docker Daemon)
+** [https://docs.docker.com/engine/reference/commandline/build/#options docker build options]
+** currently "dataspectsSystem$ VERSION=181028a ruby build_or_pull_and_save_all_Docker_images.rb"
+* Running an Ansible Playbook that will:
+** '''create''' containers from container images (which makes the containers available on the Docker Daemon)
+*** [https://docs.docker.com/engine/reference/commandline/create/#options docker create options]
+** '''start''' containers on the Docker Daemon
+*** [https://docs.docker.com/engine/reference/commandline/start/#options docker start options]
