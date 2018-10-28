@@ -1,0 +1,14 @@
+{{UseCase
+|HasEntityTitle=Index new information
+}}
+
+Indexing new information requires the following steps:
+
+# Find out how to obtain the Resources from a ResourceSilo.
+#* Examples:
+# Decide on how to entitize individual Resources.
+#* Examples:
+# Write "class MyIndexer < Indexer" that:
+## obtains a facet of Resources from the ResourceSilo ("def ajsonResourceURIs")
+## entitizes the resources in accordance with a SetOfRules
+##
