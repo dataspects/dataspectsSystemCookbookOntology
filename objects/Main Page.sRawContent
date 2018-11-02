@@ -8,6 +8,8 @@ Every piece of knowledge (regarding orientation, understanding, subjects, workfl
 
 {{EntitiesByEntityType}}
 
+These entity types are managed by dedicated [[Ontology Components]].
+
 == How to use dataspectsSystems ==
 
 == How to backup/restore/clone/synchronize dataspectsSystems ==
@@ -31,3 +33,4 @@ dataspects Docker images provide system components at a level of abstraction tha
 [[Category:Entity]]
 
 __NOTOC__
+[[Category:Entity]]

@@ -11,6 +11,6 @@
 # Select "Public URL of the diagram"
 # Uncheck "Layers" and "Lightbox"
 # Click "Create"
-# Save HTML in a file to be indexed by Dataspects::drawIoIndexer
+# Create a new Diagram page on SMW setting HasDrawIoURL to the revealed "https://drive.google.com/..."
 
 IMPORTANT: Updates of the original draw.io file on Google Drive will be propagated to all locations where the HTML has been embedded!
