@@ -1,0 +1,5 @@
+{{Troubleshooting
+|HasEntityTitle=Docker daemon asks for authentication for pulling a public image
+}}
+
+There might be an (apparently expired) authentication token in ~/.docker/config.json file, which the daemon then tried to use to pull the image from Dockerhub. Deleting the file resolved the problem.
