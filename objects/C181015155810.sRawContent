@@ -1,10 +1,24 @@
 {{Recipe
-|HasEntityTitle=Extract/export a set of pages from a SMW into a directory (git repository)
+|HasEntityTitle=Extract/export/inject/import a set of pages from/into a SMW from/into a directory (git repository)
 }}
 
 == Requirements ==
 
 * A running [https://docs.docker.com/engine/reference/commandline/dockerd/ Docker Daemon]
-* The {{DomainTerm|dataspects_app Docker image|dataspects}}
+* A {{DomainTerm|dataspects_app Docker image|dataspects}}
 * A profiles.yml file
 * A {{DomainTerm|dataspects workload script|dataspects}}
+
+Example: https://github.com/dataspects/ProvisionDSAsDSCookbook/blob/master/test_dataspects.sh
+
+ user@workstation:~/myWorkspace$ tree -L 1
+ .
+ ├── profiles.yml
+ └── myWorkloadScript.rb
+
+ user@workstation:~/myWorkspace$ sudo docker run
+                                        --volume ${PWD}:/usr/workspace \
+                                          dataspectsApp \
+                                            dataspects
+                                              --profile /usr/workspace/config/profiles.yml \
+                                                manage myWorkloadScript.rb
