@@ -4,7 +4,7 @@
 |HasEntityBlurb=This article explains all aspects (roles, use cases and tools/methodologies) that keep your enterprise knowledge management healthy, effective and efficient.
 }}
 [[File:Enterprise_Knowledge_Management_Roles_Use_Cases_and_Tools_Methodologies.png|right]]
-The collection of aspects depicted below serves as the syllabus for [[Community:Component0528678427]]. It also denotes examples from managing the domain "https://mwstake.org".
+The collection of aspects depicted below serves as the syllabus for [https://smw-cindykate.com/main/Community:Component0528678427 Event "SMWCon Fall 2019"]. It also denotes examples from managing the domain "https://mwstake.org".
 
 == Aspects ==
 

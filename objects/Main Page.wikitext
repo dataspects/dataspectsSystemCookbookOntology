@@ -4,7 +4,7 @@ dataspectsSystem is a '''knowledge management system''' based on
 
 == How this cookbook is organized ==
 
-Every piece of knowledge (regarding orientation, understanding, subjects, workflows and procedures) is of a distinct {{DomainTerm|Entity Types|dataspects}}.
+Every piece of knowledge (regarding orientation, understanding, subjects, workflows and procedures) is of a distinct {{DomainTerm|Entity Types|dataspects}}. See [[C180913155815]].
 
 {{EntitiesByEntityType}}
 

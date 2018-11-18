@@ -1,0 +1,7 @@
+{{UseCase
+|HasEntityTitle=Add/edit subject types
+|HasEntityKeyword=Add
+|ConcernsAspects=Curation
+|IsCarriedOutBy=PowerUser
+}}
+* {{Property|HasIdea|Add functionality as special page to https://github.com/dataspects/DSKMFCoreMWExtension}}

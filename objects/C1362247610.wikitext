@@ -1,0 +1,5 @@
+{{UseCase
+|HasEntityTitle=Add/edit entities
+|IsCarriedOutBy=User
+|ConcernsAspects=Editing
+}}
