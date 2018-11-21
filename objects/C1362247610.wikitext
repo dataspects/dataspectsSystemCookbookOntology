@@ -1,5 +1,9 @@
-{{UseCase
+{{Recipe
 |HasEntityTitle=Add/edit entities
 |IsCarriedOutBy=User
 |ConcernsAspects=Editing
+}}
+{{Annotation
+|AnnotationPredicate=HasDatahoiPriority
+|AnnotationObjects=1
 }}

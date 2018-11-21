@@ -1,0 +1,14 @@
+{{Recipe
+|HasEntityTitle=Restore a dataspectsSystem from a Duplicity backup set
+|IsCarriedOutBy=Administrator
+|ConcernsAspects=Installation
+}}
+{{Annotation
+|AnnotationPredicate=HasDatahoiPriority
+|AnnotationObjects=1
+}}
+== Understanding ==
+
+This recipe assumes that you have your Duplicity backup set ready in {{code|<yourLocalDirectory>/}}. For more information see [[C1362247611]].
+
+== Steps ==

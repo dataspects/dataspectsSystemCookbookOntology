@@ -1,0 +1,9 @@
+{{Recipe
+|HasEntityTitle=Ways to make remote Duplicity backup sets available in a local directory
+|IsCarriedOutBy=Administrator
+|ConcernsAspects=Installation
+}}
+{{Annotation
+|AnnotationPredicate=HasDatahoiPriority
+|AnnotationObjects=1
+}}

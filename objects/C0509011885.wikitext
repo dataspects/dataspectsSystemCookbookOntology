@@ -1,7 +1,11 @@
-{{UseCase
+{{Recipe
 |HasEntityTitle=Add/edit subject types
 |HasEntityKeyword=Add
 |ConcernsAspects=Curation
 |IsCarriedOutBy=PowerUser
+}}
+{{Annotation
+|AnnotationPredicate=HasDatahoiPriority
+|AnnotationObjects=2
 }}
 * {{Property|HasIdea|Add functionality as special page to https://github.com/dataspects/DSKMFCoreMWExtension}}
