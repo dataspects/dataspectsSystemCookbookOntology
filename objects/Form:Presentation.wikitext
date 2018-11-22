@@ -1,0 +1,7 @@
+{{{info|add title=New Presentation|edit title=Edit Presentation|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Presentation}}
+{{DataspectsCookbookEntityTypeSpecialFormTemplate0}}
+{{StandardFormSections}}
+{{FormFooter}}
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

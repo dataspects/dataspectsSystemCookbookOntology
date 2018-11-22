@@ -1,0 +1,8 @@
+{{Annotation
+|AnnotationPredicate=ConcernsAspect
+|AnnotationObjects={{{ConcernsAspects|}}}
+}}
+{{Annotation
+|AnnotationPredicate=IsCarriedOutBy
+|AnnotationObjects={{{IsCarriedOutBy|}}}
+}}<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

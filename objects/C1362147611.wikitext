@@ -1,0 +1,6 @@
+{{Presentation
+|HasEntityTitle=How to store and structure knowledge on a SMW — here's the framework
+|IsCarriedOutBy=Promoter
+|ConcernsAspects=Promotion
+}}
+https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2018/How_to_store_and_structure_knowledge_on_a_SMW_%E2%80%94_here%27s_the_framework

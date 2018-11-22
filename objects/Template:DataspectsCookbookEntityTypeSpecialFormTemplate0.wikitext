@@ -1,0 +1,6 @@
+!ConcernsAspects
+|<nowiki>{{{</nowiki>field<nowiki>|</nowiki>ConcernsAspects<nowiki>|</nowiki>input type=tokens<nowiki>|</nowiki>values from property=ConcernsAspects<nowiki>}}}</nowiki>
+|-
+!IsCarriedOutBy
+|<nowiki>{{{</nowiki>field<nowiki>|</nowiki>IsCarriedOutBy<nowiki>|</nowiki>input type=tokens<nowiki>|</nowiki>values from property=ConcernsAspects<nowiki>}}}</nowiki>
+|-<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>
