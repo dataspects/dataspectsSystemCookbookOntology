@@ -1,6 +1,7 @@
 {{{info|add title=New UseCase|edit title=Edit UseCase|page name=C<unique number;random;10>}}}
 
 {{FormHeader|UseCase}}
+{{DataspectsCookbookEntityTypeSpecialFormTemplate0}}
 {{StandardFormSections}}
 {{FormFooter}}
 
