@@ -1,7 +1,7 @@
 <includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=Presentation}}
 {{DataspectsCookbookEntityTypeSpecialTemplateTemplate0
-|IsCarriedOutBy={{{IsCarriedOutBy}}}
-|ConcernsAspects={{{ConcernsAspects}}}
+|IsCarriedOutBy={{{IsCarriedOutBy|}}}
+|ConcernsAspects={{{ConcernsAspects|}}}
 }}
 </includeonly>
 <noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

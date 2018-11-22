@@ -47,9 +47,9 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 
 |-
 |width=33%|
-=== [[ConfigurationAndMaintenance|Configuration & Maintenance]] ===
+=== [[Configuration]] / [[Maintenance]] ===
 ; ''Upgrade, tune, optimize and secure a MediaWiki-centric Knowledge Management system''
-{{#ask:[[ConcernsAspect::ConfigurationAndMaintenance]]
+{{#ask:[[ConcernsAspect::Configuration]] OR [[ConcernsAspect::Maintenance]]
 |?IsCarriedOutBy=
 |format=ul
 }}
@@ -92,6 +92,12 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 |}
 
 == Use cases by role ==
+
+{{#ask:[[IsCarriedOutBy::+]]
+|?IsCarriedOutBy
+|format=ul
+|sort=IsCarriedOutBy
+}}
 
 === Role "Community Member" ===
 

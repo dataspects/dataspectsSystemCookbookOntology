@@ -2,7 +2,7 @@
 |HasEntityTitle=Add/edit subject types
 |HasEntityKeyword=Add
 |ConcernsAspects=Curation
-|IsCarriedOutBy=PowerUser
+|IsCarriedOutBy=Role:PowerUser
 }}
 {{Annotation
 |AnnotationPredicate=HasDatahoiPriority
