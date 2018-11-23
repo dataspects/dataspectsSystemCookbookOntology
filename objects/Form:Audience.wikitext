@@ -1,0 +1,7 @@
+{{{info|add title=New Audience|edit title=Edit Audience|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Audience}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

@@ -3,4 +3,8 @@
 |IsCarriedOutBy=C0709011885
 |ConcernsAspects=Promotion
 }}
+{{Annotation
+|AnnotationPredicate=AddressesAudience
+|AnnotationObjects=MWStake
+}}
 https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2018/How_to_store_and_structure_knowledge_on_a_SMW_%E2%80%94_here%27s_the_framework
