@@ -1,6 +1,6 @@
 {{Recipe
 |HasEntityTitle=Restore a dataspectsSystem from a Duplicity backup set
-|IsCarriedOutBy=Administrator
+|IsCarriedOutByRole=Administrator
 |ConcernsAspects=Installation
 }}
 {{Annotation

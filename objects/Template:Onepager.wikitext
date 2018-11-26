@@ -1,4 +1,4 @@
-<includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=Recipe}}
+<includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=Onepager}}
 {{DataspectsCookbookEntityTypeSpecialTemplateTemplate0
 |IsCarriedOutByRole={{{IsCarriedOutByRole|}}}
 |ConcernsAspects={{{ConcernsAspects|}}}

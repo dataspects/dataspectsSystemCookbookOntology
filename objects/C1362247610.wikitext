@@ -1,6 +1,6 @@
 {{Recipe
 |HasEntityTitle=Add/edit entities
-|IsCarriedOutBy=User
+|IsCarriedOutByRole=User
 |ConcernsAspects=Editing
 }}
 {{Annotation

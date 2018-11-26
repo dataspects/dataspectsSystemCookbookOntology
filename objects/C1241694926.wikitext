@@ -1,0 +1,3 @@
+{{Argument
+|HasEntityTitle=No vendor lock-in
+}}

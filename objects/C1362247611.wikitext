@@ -1,6 +1,6 @@
 {{Recipe
 |HasEntityTitle=Ways to make remote Duplicity backup sets available in a local directory
-|IsCarriedOutBy=Administrator
+|IsCarriedOutByRole=Administrator
 |ConcernsAspects=Installation
 }}
 {{Annotation

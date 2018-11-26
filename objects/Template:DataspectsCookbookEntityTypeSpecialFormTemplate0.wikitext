@@ -1,6 +1,6 @@
 !ConcernsAspects
-|<nowiki>{{{</nowiki>field<nowiki>|</nowiki>ConcernsAspects<nowiki>|</nowiki>input type=tokens<nowiki>|</nowiki>values from property=ConcernsAspects<nowiki>}}}</nowiki>
+|<nowiki>{{{</nowiki>field<nowiki>|</nowiki>ConcernsAspects<nowiki>|</nowiki>input type=tokens<nowiki>|</nowiki>values from property=ConcernsAspect<nowiki>}}}</nowiki>
 |-
-!IsCarriedOutBy
-|<nowiki>{{{</nowiki>field<nowiki>|</nowiki>IsCarriedOutBy<nowiki>|</nowiki>input type=tokens<nowiki>|</nowiki>values from property=ConcernsAspects<nowiki>}}}</nowiki>
+!IsCarriedOutByRole
+|<nowiki>{{{</nowiki>field<nowiki>|</nowiki>IsCarriedOutByRole<nowiki>|</nowiki>input type=tokens<nowiki>|</nowiki>values from property=IsCarriedOutByRole<nowiki>}}}</nowiki>
 |-<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

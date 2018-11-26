@@ -1,0 +1,10 @@
+{{Onepager
+|HasEntityTitle=Arrange your knowledge on the fly
+|ConcernsAspects=Promotion
+|HasKeyword=Faceting
+}}
+
+{{Annotation
+|AnnotationPredicate=AddressesAudience
+|AnnotationObjects=User
+}}

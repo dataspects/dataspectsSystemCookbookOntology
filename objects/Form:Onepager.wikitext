@@ -1,0 +1,8 @@
+{{{info|add title=New Onepager|edit title=Edit Onepager|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Onepager}}
+{{DataspectsCookbookEntityTypeSpecialFormTemplate0}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

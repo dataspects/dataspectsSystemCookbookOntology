@@ -1,6 +1,6 @@
 {{Presentation
 |HasEntityTitle=How to store and structure knowledge on a SMW — here's the framework
-|IsCarriedOutBy=C0709011885
+|IsCarriedOutByRole=C0709011885
 |ConcernsAspects=Promotion
 }}
 {{Annotation

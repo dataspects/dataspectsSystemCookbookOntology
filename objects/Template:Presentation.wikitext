@@ -1,6 +1,6 @@
 <includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=Presentation}}
 {{DataspectsCookbookEntityTypeSpecialTemplateTemplate0
-|IsCarriedOutBy={{{IsCarriedOutBy|}}}
+|IsCarriedOutByRole={{{IsCarriedOutByRole|}}}
 |ConcernsAspects={{{ConcernsAspects|}}}
 }}
 </includeonly>

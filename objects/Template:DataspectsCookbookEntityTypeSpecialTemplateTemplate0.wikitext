@@ -3,6 +3,6 @@
 |AnnotationObjects={{{ConcernsAspects|}}}
 }}
 {{Annotation
-|AnnotationPredicate=IsCarriedOutBy
-|AnnotationObjects={{{IsCarriedOutBy|}}}
+|AnnotationPredicate=IsCarriedOutByRole
+|AnnotationObjects={{{IsCarriedOutByRole|}}}
 }}<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

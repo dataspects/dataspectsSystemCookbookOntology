@@ -1,0 +1,8 @@
+{{{info|add title=New Argument|edit title=Edit Argument|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Argument}}
+{{DataspectsCookbookEntityTypeSpecialFormTemplate0}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

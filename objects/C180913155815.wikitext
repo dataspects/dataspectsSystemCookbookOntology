@@ -14,7 +14,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 ; ''Make management decide for MediaWiki-centric Knowledge Management''
 ; ''Make all roles enjoy using MediaWiki-centric Knowledge Management''
 {{#ask:[[ConcernsAspect::Promotion]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -23,7 +23,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === [[Curation]] ===
 ; ''Maintain knowledge structured, coherent, consistent, manageable and accessible''
 {{#ask:[[ConcernsAspect::Curation]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -32,7 +32,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === [[Viewing]] ===
 ; ''Optimize pertinent facets findable through search''
 {{#ask:[[ConcernsAspect::Viewing]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -41,7 +41,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === [[Editing]] ===
 ; ''Facilitate editing knowledge content and its affinities''
 {{#ask:[[ConcernsAspect::Editing]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -50,7 +50,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === [[Configuration]] / [[Maintenance]] ===
 ; ''Upgrade, tune, optimize and secure a MediaWiki-centric Knowledge Management system''
 {{#ask:[[ConcernsAspect::Configuration]] OR [[ConcernsAspect::Maintenance]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -58,7 +58,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === [[Extensions]] ===
 ; ''Add features and interfaces''
 {{#ask:[[ConcernsAspect::Extensions]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -67,7 +67,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === [[Integration]] ===
 ; ''Make use of external and provide internal data and functionality''
 {{#ask:[[ConcernsAspect::Integration]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -76,7 +76,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === [[Installation]] ===
 ; ''Deploy a MediaWiki-centric Knowledge Management system''
 {{#ask:[[ConcernsAspect::Installation]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -85,7 +85,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === [[Development]] ===
 ; ''Develop all aspects of a MediaWiki-centric Knowledge Management system''
 {{#ask:[[ConcernsAspect::Development]]
-|?IsCarriedOutBy=
+|?IsCarriedOutByRole=
 |format=ul
 }}
 
@@ -93,10 +93,10 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 
 == Use cases by role ==
 
-{{#ask:[[IsCarriedOutBy::+]]
-|?IsCarriedOutBy
+{{#ask:[[IsCarriedOutByRole::+]]
+|?IsCarriedOutByRole
 |format=ul
-|sort=IsCarriedOutBy
+|sort=IsCarriedOutByRole
 }}
 
 === Role "Community Member" ===
@@ -117,11 +117,11 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 === Role "Patron" ===
 = "decision maker"
 
-{{#ask:[[IsCarriedOutBy::Patron]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::Patron]]|?ConcernsAspect=|format=ul}}
 
 === Role "Reader" ===
 
-{{#ask:[[IsCarriedOutBy::Reader]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::Reader]]|?ConcernsAspect=|format=ul}}
 
 === Role "Contributor/Editor" ===
 = contributing with content to the wiki & editor = person who is editing the wiki/putting content into the wiki
@@ -131,7 +131,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 * uses Visual Editor to edit text
 
 
-{{#ask:[[IsCarriedOutBy::User]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::User]]|?ConcernsAspect=|format=ul}}
 
 === Role "PowerUser" ===
 * all of editor/contributor
@@ -147,7 +147,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 * Use Case "Train end users"
 ** [[Component1749967955]] (DSKMF feature extraction upon arrival)
 
-{{#ask:[[IsCarriedOutBy::PowerUser]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::PowerUser]]|?ConcernsAspect=|format=ul}}
 
 === Role "Ontology Designer" ===
 * creates templates, properties, forms, queries
@@ -163,7 +163,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 * ''All of the above'' +
 * Use Case "Backup/restore system for several purposes" ([[Component0272684347]])
 
-{{#ask:[[IsCarriedOutBy::Administrator]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::Administrator]]|?ConcernsAspect=|format=ul}}
 
 === Role "OntologyEngineer" ===
 * technically improves the ontology of the ontology designer
@@ -175,7 +175,7 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 * Use Case "Upgrade dataspects Knowledge Management Framework (DSKMF)"
 * Use Case "Manage DSKMF customization part" using [[Component 759410]]
 
-{{#ask:[[IsCarriedOutBy::OntologyEngineer]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::OntologyEngineer]]|?ConcernsAspect=|format=ul}}
 
 === Role "SearchEngineer" ===
 
@@ -186,14 +186,14 @@ The collection of aspects depicted below serves as the syllabus for [https://smw
 
 One of a SearchEngineer's main tasks is to [[Customize|customize]] a search engine.
 
-{{#ask:[[IsCarriedOutBy::SearchEngineer]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::SearchEngineer]]|?ConcernsAspect=|format=ul}}
 
 === Role "Curator" ===
 
 * Use Case "Consolidate, curate, clean content and manage coherence" using [[Component 759410]] (example: [[Component 600319]])
 * Use Case "Manage, monitor and interpret quality metrics" (What are they?)
 
-{{#ask:[[IsCarriedOutBy::Curator]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::Curator]]|?ConcernsAspect=|format=ul}}
 
 === Role "Developer" ===
 
@@ -201,4 +201,4 @@ One of a SearchEngineer's main tasks is to [[Customize|customize]] a search engi
 
 * Use Case "Develop dataspects tools"
 
-{{#ask:[[IsCarriedOutBy::Developer]]|?ConcernsAspect=|format=ul}}
+{{#ask:[[IsCarriedOutByRole::Developer]]|?ConcernsAspect=|format=ul}}
