@@ -1,0 +1,7 @@
+{{{info|add title=New RubyGem|edit title=Edit RubyGem|page name=C<unique number;random;10>}}}
+
+{{FormHeader|RubyGem}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>
