@@ -1,0 +1,7 @@
+{{{info|add title=New Setup|edit title=Edit Setup|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Setup}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

@@ -1,0 +1,7 @@
+{{Role
+|HasEntityTitle=User
+|HasEntityBlurb=#Reader
+#Contributor/Editor
+#Poweruser
+#Gardener
+}}

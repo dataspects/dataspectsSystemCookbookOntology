@@ -1,0 +1,6 @@
+{{Argument
+|HasEntityTitle=Structured and unstructured content go hand in hand
+|HasKeyword=content;structure
+|HasEntityBlurb=Content within the structured ontology in the wiki is closely held together by relations (via annotations, properties, categories). This structure is working in the background. The user has additional possibilities to relate content (via links and manually created annotations). Also content that is not prestructured whatsoever can be dropped in the wiki, linked to and integrated into the structure later on.
+|ConcernsAspects=Curation
+}}

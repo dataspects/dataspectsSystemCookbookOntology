@@ -1,0 +1,9 @@
+{{Recipe
+|HasEntityTitle=Setup and configure the skin Tweeki
+|HasKeyword=skin;Tweeki;Configuration
+}}
+
+==Installation==
+
+==Setup & Configuration==
+# Add navigation bar at [[MediaWiki: Tweeki-navbar-left]] (see [https://tweeki.thai-land.at/wiki/MediaWiki:Tweeki-navbar-left example])

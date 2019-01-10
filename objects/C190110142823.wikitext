@@ -1,0 +1,5 @@
+{{SystemComponent
+|HasEntityTitle=dataspects-webservice
+}}
+
+{{code|dataspects-webservice}} hosts its source at {{Property|HasGitHubRepository|https://github.com/dataspects/dataspects-webservice}}.

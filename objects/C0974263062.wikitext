@@ -1,0 +1,8 @@
+{{Onepager
+|HasEntityTitle=Easy diagram management in the wiki
+|HasKeyword=diagrams;graphs;statistics;analytics;reports;data visualization
+|HasEntityBlurb=Diagrams can easily (and visually appealing) be created via draw.io. The diagrams are stored on a server and are seamlessly integrated onto wiki pages and into search results. From search results, the diagrams can be viewed and edited (link to editing page). Like this, the external diagram service is best integrated into the wiki.
+}}
+Diagrams can easily (and visually appealing) be created via [https://www.draw.io draw.io]. The diagrams are stored on a server and are seamlessly integrated onto wiki pages and into search results. From search results, the diagrams can be viewed and edited (link to editing page). Like this, the external diagram service is best integrated into the wiki.
+
+Question: Why Google Drive? Other (reasonable) options?

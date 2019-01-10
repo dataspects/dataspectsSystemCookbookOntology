@@ -1,0 +1,8 @@
+{{Role
+|HasEntityTitle=Content Curator
+}}
+# Be the expert for the business domain
+# Work together with the [[Ontology Designer]]
+# Understand the needs of the [[User]], especially the reader
+# Define the details of the domain
+# Find resources for the search engine (website, email, wiki, documents, ontology)

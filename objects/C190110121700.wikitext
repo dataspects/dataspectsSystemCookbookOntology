@@ -1,0 +1,62 @@
+{{Setup
+|HasEntityTitle=dataspectsSystem on DigitalOcean
+|HasEntityBlurb=This setup explains how dataspectsSystem is set up on dataspects' own DigitalOcean infrastructure.
+}}
+
+== docker-compose.yml ==
+
+{{code|/usr/local/etc/dataspects/docker-compose.yml}} '''specifies''' all '''Docker containers and volumes'''.
+
+== Docker volumes ==
+
+The Docker volume {{code|dataspects_webservice_customer_data}} is '''volumed into''' the {{code|webservice}} and {{code|sidekiq}} services at {{code|/usr/dataspectsSoftware/}} inside the containers.
+
+== Images and containers ==
+
+Both '''containers''' for services {{code|webservice}} and {{code|sidekiq}}:
+
+# are '''run from the [[C190110142823]]'s Docker image''' hosted at {{code|550143289598.dkr.ecr.eu-central-1.amazonaws.com/dataspects-webservice}} which '''contains the Ruby gem''' https://github.com/dataspects/dataspects
+# have these '''environment variables''' set:
+#* {{code|DATASPECTS_SEARCH_CONFIG_FILE: /usr/dataspectsSoftware/dataspectsSearch_config.yml}}
+#* {{code|DATASPECTS_PLUGINS_FOLDER: /usr/dataspectsSoftware/PLUGINS}}
+
+== Plugins ==
+
+{{code|DATASPECTS_PLUGINS_FOLDER: /usr/dataspectsSoftware/PLUGINS}} is the location where '''plugins''' are placed. Code in such plugins '''add and/or overwrite methods''' in https://github.com/dataspects/dataspects.
+
+'''Plugins''' can be:
+* code that '''specifies query/result functionality/design''', e.g. https://github.com/dataspects/webservice_search_plugin
+* code that '''indexes ResourceSilos''', e.g. https://github.com/dataspects/ProvisionDSAsDSCookbook ([[C180913155810]])
+
+== About indexing file system directories ==
+
+File system directories are indexed using https://github.com/dataspects/dataspects-indexer which is run on the file system itself.
+
+Requirements are:
+
+# dataspects-indexer must be able to connect to a pertinent dataspects-webservice and a TIKA service (both urls specified in config.json)
+
+How to use it:
+
+# Download the version for your OS from https://github.com/dataspects/dataspects-indexer/releases to any location on your corresponding file server.
+# Configure your-config.json and place it anywhere on the corresponding file server.
+ {
+   "TikaURL": "https://tika.dataspects.com",
+   "FilenameRegex": ".pdf",
+   "RootFolder": "/File-Location",
+   "DataspectsWebserviceURL": "https://webservice.dataspects.com",
+   "TikaUsername": "",
+   "TikaPassword": ""
+ }
+# Run it by: {{code|user@fileserver:/your/directory/dataspects-indexer --config ~/Dev/Dataspects/dataspects-indexer/config.json --indexer <YourIndexerID>}}
+
+The indexer
+ {
+   "IndexerID": "",
+   "TikaData": [],
+   "AbsoluteFilePath": "/Users/data/Downloads/Invoices/invoice-1.pdf"
+ }
+
+== Endpoints ==
+
+{{code|webservice}} '''serves the endpoints''' specified in https://github.com/dataspects/dataspects-webservice/blob/master/config/routes.rb at https://webservice.dataspects.com.

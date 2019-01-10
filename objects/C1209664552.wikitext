@@ -1,0 +1,34 @@
+{{Recipe
+|HasEntityTitle=Create Kibana visualizations and dashboard
+|HasKeyword=kibana;statistics;analytics;dashboard;visualization
+}}
+
+*Was ist in meinem Index enthalten? OK
+
+*Welche Inhaltstypen? (entity types) OK
+*Welche Properties? – (property) OK
+*Wie viele Inhalte aus jeder Quelle? (resource silos) OK
+
+*Pie Chart – originated from resource silos
+
+*What’s the traffic in different regions of the world?
+*What are the top URLs requested?
+*What are the top IP addresses making requests?
+*How’s the bandwidth usage over time?
+*Is there any suspicious or malicious activity from any region/IP address?
+
+
+*Wonach wurde im letzten Monat am häufigsten gesucht?
+*Welche Suchbegriffe ergaben kein Ergebnis?
+*Wie haben sich die Suchergebnisse seit dem letzten Monat geändert?
+
+*Welche Quellen wurde am häufigsten gefiltert?
+
+*Welche Ergebnisse hatten eine gute bzw. schlechte Click-through-rate?
+
+
+#Suchadmin – zum Bearbeiten im Backend!
+#Kunden – wow!
+
+
+> Log-stash

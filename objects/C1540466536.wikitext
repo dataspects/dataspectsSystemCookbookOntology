@@ -1,0 +1,36 @@
+{{Role
+|HasEntityTitle=New employee
+}}
+==SEARCH & WIKI==
+find & learn
+
+—new employee
+
+''Shorten the time it takes for your new employees to get productive.''
+
+New employees take on special [[user role]] in the company. The wiki facilitates their [[onboarding]] and enhances autonomy through various [[dashboards]], openly and via keywords accessible knowledge and numerous helpful [[functions]].
+
+===Easy onboarding:===
+*New employee gets familiar with the company’s information structure, culture and vocabulary quickly and autonomous.
+*Company creates space for the new employee’s skills and ideas to improve and add to the company’s knowledge. (''You hired them to work with you, after all!'')
+
+===Easy wiki learning:===
+*Employee uses the wiki from day one as the tool of choice.
+*Employee learns the structure as is, there are no dedicated wiki manuals.
+
+===Knowledge is easily accessible:===
+*Personalized dashboard in the wiki on the user page serves as starting point. Includes a checklist for first steps.
+*Many different ways to access knowledge in the wiki serve different users: dashboards, main page, keywords, search, links, navigation.
+*Overview dashboards for users, departments, roles, projects are created when needed and help browsing content.
+*Quick access to information is reached via search.
+
+===Easy organization for new employees:===
+File systems mostly offer a single "one-size-must-fit-all" view on your organization's information. Relevant resources may be buried deeply in directory paths. This requires your new employee to learn and memorize ways of accessing things. Those ways are not necessarily logical but may have grown organically, not to mention duplicates and information on local desktop storage. '''In the wiki, employees can access knowledge based on keywords and content references/relations instead of storage location.'''
+
+===Main benefits:===
+*Knowledge is flexibly accessible and independent from structure.
+*New employee can accustom and learn autonomously, which usually increases motivation and strengthens trust.
+*Employees can use individualized structures for preferred content knowledge stays accessible for all on a common platform.
+*'''Employees can access knowledge based on keywords and content references/relations instead of storage location.'''
+*Employees share their knowledge here and communicate there. Wiki frees up communication time.
+*Employees don’t just learn things on the surface: Lengthy, broad and well-related information allows for deeper understanding.

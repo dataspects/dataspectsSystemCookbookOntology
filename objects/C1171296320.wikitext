@@ -1,0 +1,96 @@
+{{Onepager
+|HasEntityTitle=Onepager per role
+|HasEntityBlurb=Onepager per user role in the company and/or ontology – benefits for this user role, responsibilites, working fields in the wiki, chances etc.
+}}
+Still open: Personas
+
+==Onepager: User==
+Users in the wiki can take four different roles/working fields:
+; '''Reader'''
+: = browsing through the wiki via dashboards and links to learn more, searching the wiki for specific information
+: Browsing through the wiki or searching for specific information, the reader needs clear information architecture, easily accessible dashboards for often used content and a high-performance search with relevant search results.
+; '''Contributor/Editor'''
+: = contributing with content to the wiki
+: The contributor is editing wiki pages on smaller or larger scale: Correcting errors, adding small chunks of information here and there, adding formatting, adding paragraphs of information, adding entirely new pages with a form. She/He is mostly in her/his own field/department/knowledge domain. Editing shall be easy and encouraged.
+: She/He uses VE and forms to add/edit text.
+; '''Power user/Peers'''
+: = dedicated heavy user, technically oriented
+: The power user is an active contributor to the wiki and technically oriented. Her/his is interested in the wiki functionalities under the hood and usually has a better grasp of the technical features and formatting options than other users. She/he can be a peer for other users and helps promoting the wiki. Power users are an important driver for the wiki.
+: She/He uses also source text to add/change text.
+;'''Gardener'''
+: The gardener (a dedicated role for power users) helps organizing and structuring the wiki: Categorizing, moving, renaming, deleting pages, dividing and combining content, improving key word consistency etc.
+: She/He usually works in the source code.
+
+
+===Benefits===
+* Have a question? Find the answer quickly in the wiki.
+…
+
+===Chances===
+How can you address the different user roles in the wiki?
+
+; Reader
+: Put the search bar upfront
+: Show what can be found in this wiki
+: Show clearly how you can find your way through this wiki
+: Offer more than one possibility to reach content (main page, navigation, search bar, dashboards and overview sections, text links, breadcrumbs, direct URL input)
+: Make the search fast, show relevant results, give search feedback, let filter results, make clear how search was interpreted.
+: Overview sections: dashboards (automatized, after user role and department, and individualized): New in the wiki, latest changes (page, user), authors of pages
+: Usability in GUI: Mouseover on buttons/links, clear error feedback
+
+; Contributor
+: Make working in the wiki seamless and easy, reduce clutter, engage participation
+: Show clearly where to find help, and ways how to learn the details.
+: Make it easy to report back improvement ideas.
+: Make editing a pleasurable experience
+
+; Power user/peer
+: Give tools for easy improvement of the wiki: formatting, structuring
+: Do not slow down engagement, but give possibility to shine
+: Reward engagement
+: Show authors/contributions on pages
+: Help learning process for wiki functionalities
+: Give peer position, facilitate communication with other users
+: Encourage promotion
+: Ease source editing (wiki editor)
+: Make it easy to find out what pages would need creation
+: Make it easy to ask for functionality ideas, improvement wishes, make list managable
+
+; Gardener
+: Give tools for monitoring the wiki easily (special pages, extra dashboard)
+:: Give tools for easy categorization (if needed), give tools for easy marking of pages
+: Develop tools and guidelines for editing in the wiki, involve gardener heavily in the process
+: Key word management
+: Make gardening work ending, not never-ending (Sisyphus)
+: Give rights to claim help from others
+: Give rewards and visibility for the work
+
+
+<pre>
+MARJCHRZAK06 folgern außerdem, dass verschiedene Gruppen von NutzerInnen unterschiedliche Motive für die Beteiligung haben: Synthetisierende sind stark an ihrem Einfluss und den Auswirkungen ihrer Arbeit interessiert, während Beitragende sich mehr um Zeit, vereinfachte Arbeitsprozesse und ihre formale Rolle in der Gruppe sorgen. Zur Kerngruppe der NutzerInnen mit erweiterten Berechtigungen gehören – entgegen der Intuition – eher Beitragende, nicht Synthetisierende. Somit kann man schlussfolgern, dass PoweruserInnen und GärtnerInnen (die zu den Synthetisierenden zu zählen sind) nicht zur ursprünglich bestimmten Kerngruppe des Projekts zählen und sich die Motive für ihre Arbeit im Wiki nicht auf das Lösen von Problemen beschränken. SIEHE KAPITEL MOTIVE
+
+</pre>
+
+<pre>
+MINTZBERG definiert fünf unterschiedliche Gruppen eines Unternehmens, die sich in weiterer Folge durch unterschiedliche Nutzung von IT-Systemen auszeichnen: individuelle Beitragende, die die Arbeit machen („operating core“),; Manager („middle line“), Führungskräfte („strategic apex“), technologische Hilfe für das Erstellen von Prozessstrukturen und Workflows („technostructure“), Hilfskräfte („support staff“) (MARJCHRZAK06, S. 103). Auch MINTZBERG identifiziert unterschiedliche Prioritäten und Aktivitätsmuster, die zu unterschiedlicher Zufriedenheit  mit dem eingesetzten System führen: Etwa kann sich eine Managerin Struktur, Vollständigkeit, Regelmäßigkeit und Nachhaltigkeit erwarten, während die Nutzerin mit einfachen, oft gebrauchten Informationen und spontaner „Wegwerf“-Nutzung zufrieden sein kann (POOLE10, o S.). Diese Kluft in Erwartungen ist grundsätzlich in weniger hierarchisch strukturierten Unternehmen als geringer problematisch einzuschätzen. Wikis, die mit feingranulierten Berechtigungen aufwarten, spiegeln die Unterschiedlichkeit in Erwartungen wider und tragen mit der Hierarchie eher zum Problem der Ungleichheit bei.
+
+</pre>
+<pre>
+1 / Power / Macht / Wirksamkeit /
+2 / Curiosity / Neugier / Verwunderung /
+3 / Independence / Unabhängigkeit / Freiheit /
+4 / Status / Status / Selbstherrlichkeit /
+5 / Social Contact / sozialer Kontakt / Spaß /
+6 / Vengeance / Rache / Rechtfertigung/ Rehabilitation / Verteidigung /
+7 / Honor / Ehre / Loyalität /
+8 / Idealism / Idealismus / Mitgefühl /
+9 / Physical Exercise / körperliche Bewegung / Vitalität /
+10 / Romance / Romantik / Lust /
+11 / Family / Familie / Liebe /
+12 / Order / Ordnung / Stabilität /
+13 / Eating / Essen / Sättigung /
+14 / Acceptance / Akzeptanz / Selbstbewusstsein/Selbstvertrauen /
+15 / Tranquility / Ruhe / Sicherheit, Entspannung /
+16 / Saving / Sammeln, Sparen / Besitz, Eigentum /
+
+</pre>
