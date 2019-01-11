@@ -20,7 +20,7 @@ Both '''containers''' for services {{code|webservice}} and {{code|sidekiq}}:
 #* {{code|DATASPECTS_SEARCH_CONFIG_FILE: /usr/dataspectsSoftware/dataspectsSearch_config.yml}}
 #* {{code|DATASPECTS_PLUGINS_FOLDER: /usr/dataspectsSoftware/PLUGINS}}
 
-== Plugins ==
+== Indexing ResourceSilos ==
 
 {{code|DATASPECTS_PLUGINS_FOLDER: /usr/dataspectsSoftware/PLUGINS}} is the location where '''plugins''' are placed. Code in such plugins '''add and/or overwrite methods''' in https://github.com/dataspects/dataspects.
 
@@ -28,7 +28,7 @@ Both '''containers''' for services {{code|webservice}} and {{code|sidekiq}}:
 * code that '''specifies query/result functionality/design''', e.g. https://github.com/dataspects/webservice_search_plugin
 * code that '''indexes ResourceSilos''', e.g. https://github.com/dataspects/ProvisionDSAsDSCookbook ([[C180913155810]])
 
-== About indexing file system directories ==
+=== Indexing file system directories ===
 
 File system directories are indexed using https://github.com/dataspects/dataspects-indexer which is run on the file system itself.
 
@@ -57,6 +57,53 @@ The indexer
    "AbsoluteFilePath": "/Users/data/Downloads/Invoices/invoice-1.pdf"
  }
 
-== Endpoints ==
+=== Indexing ResourceSilos providing an API ===
+
+ResourceSilos that provide an API are '''indexed by running a {{DomainTerm|dataspects workload script|dataspects}}''' by [[C190909102000]].
+
+Here's an example of a workload script:
+
+<syntaxhighlight lang="Bash">
+user@workstation:~/myIndexingWorkspace$ tree
+.
+├── profiles.yml
+└── myIndexer.rb
+</syntaxhighlight>
+
+<syntaxhighlight lang="Ruby">
+# myIndexer.rb
+module Dataspects
+  class MyIndexer < Indexer
+
+    # STEP 1: Specify basic indexing components
+    def initialize
+      @sProfilesURL = 'profiles.yml'
+      # The following labels refer items in profiles.yml
+        @sTIKAServerLabel = 'dataspectsSystemTIKAServer'
+        @sElasticsearchClusterName = "dataspectsSystemESCluster"
+        @sResourceSiloName = "localmediawiki"
+      @sIndexName = "smwckindex-0"
+      super
+      # Specify a ResourceSilo, e.g. a MediaWiki
+      @oSMW = SemanticMediaWiki.new(@oProfiles, @sResourceSiloName, @hOptions)
+    end
+
+    # STEP 2: Specify which Resources to index from the
+    #         ResourceSilo specified to index
+    def ajsonObjectURIs
+    end
+
+    # STEP 3: Iterate through all Resources selected for indexing
+    #         and apply entitizers (splitting a Resource into a single
+    #         or multiple entities) and documentors (creating an
+    #         ElasticsearchJSONDocument from an Entity)
+    def store_RESOURCENAME(jsonResourceURI)
+    end
+
+  end
+end
+</syntaxhighlight>
+
+== Federated search engine ==
 
 {{code|webservice}} '''serves the endpoints''' specified in https://github.com/dataspects/dataspects-webservice/blob/master/config/routes.rb at https://webservice.dataspects.com.
