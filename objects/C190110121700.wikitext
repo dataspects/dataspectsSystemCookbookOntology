@@ -107,3 +107,27 @@ end
 == Federated search engine ==
 
 {{code|webservice}} '''serves the endpoints''' specified in https://github.com/dataspects/dataspects-webservice/blob/master/config/routes.rb at https://webservice.dataspects.com.
+
+== Cloning and backup ==
+
+=== Understanding ===
+
+# You copy your dataspectsSystem production instance's docker-compose.yml to run your dataspectsSystem test instance
+# You configure your dataspectsSystem production instance's proxy so that it will serve your dataspectsSystem test instance at a different host name
+
+=== Step 1: Copy your dataspectsSystem production instance's docker-compose.yml ===
+
+Assuming your original dataspectsSystem is located at {{code|user@workstation:~/myDataspectsSystem}}, then make a copy like this:
+
+<syntaxhighlight lang="bash">
+user@workstation:~$ cp -r myDataspectsSystem myTestDataspectsSystem
+</syntaxhighlight>
+
+=== Step 2: Adjust settings in your dataspectsSystem test instance's docker-compose.yml ===
+
+# All host ports
+# Remove proxy service
+
+=== Step 3: Add settings to your dataspectsSystem production instance's proxy ===
+
+#
