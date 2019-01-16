@@ -2,3 +2,7 @@
 |HasEntityTitle=dataspectsSystem Dockerized Setup
 |HasDrawIoURL=https://drive.google.com/a/dataspects.com/uc?id=1VAKkbP3j0m5Q1W1sjBVu3U8evMt26ZkS
 }}
+
+{{Context
+|HasContext=C0169948125
+}}

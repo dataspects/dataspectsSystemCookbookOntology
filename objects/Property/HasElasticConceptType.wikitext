@@ -2,4 +2,4 @@
 |PropertyType=Text
 |HasEntityKeywords=Elastic
 }}
-[[Category:dataspectsCookbookOntology]]
+[[Category:dataspectsSystemCookbookOntology]]

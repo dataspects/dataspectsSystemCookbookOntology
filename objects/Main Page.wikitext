@@ -1,4 +1,4 @@
- [http://localmediawiki:3000 Search] &mdash; [[Entity Types]] &mdash; [[Ontology Components]] &mdash; [[MediaWiki:Common.css]]
+[http://localmediawiki:3000 Search] &mdash; [[Entity Types]] &mdash; [[Ontology Components]] &mdash; [[MediaWiki:Common.css]]
 
 dataspectsSystem is a '''knowledge management system''' based on
 * a [http://localhost:20107/search search engine] that can [https://dataspects.com/dataspects-search index any kind of information source]
@@ -32,7 +32,4 @@ dataspects Docker images provide system components at a level of abstraction tha
 
 == How to develop dataspectsSystems ==
 
-[[Category:Entity]]
-
 __NOTOC__
-[[Category:Entity]]

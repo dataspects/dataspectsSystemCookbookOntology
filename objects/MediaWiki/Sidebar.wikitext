@@ -1,6 +1,8 @@
 * navigation
 ** mainpage|mainpage-description
 ** recentchanges-url|recentchanges
+* dataspects
+** Contexts|Contexts
 ** C180913155815|EKM Aspects
 ** Entity Types|Entity Types
 ** Domain Terms|Domain Terms

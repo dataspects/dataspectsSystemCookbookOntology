@@ -1,0 +1,79 @@
+{{Setup
+|HasEntityTitle=dataspectsSystem Dockerized Setup
+}}
+== Clone a dataspectsSystem ==
+
+=== Step 1: Copy your dataspectsSystem production instance's docker-compose.yml===
+You '''copy your dataspectsSystem production instance's docker-compose.yml''' to run your dataspectsSystem test instance.
+
+Assuming your original dataspectsSystem is located at {{code|user@workstation:~/myDataspectsSystem}}, then make a copy like this:
+
+<syntaxhighlight lang="bash">
+user@dockerserver:~$ cp -r myDataspectsSystem myTestDataspectsSystem
+</syntaxhighlight>
+
+=== Step 2: Adjust settings in your dataspectsSystem test instance's docker-compose.yml===
+
+# Choose new host ports for these services:
+#* elasticsearch
+#* kibana
+#* dataspects-webservice
+# Remove proxy service and volume
+
+=== Step 3: Add settings to your dataspectsSystem production instance's proxy===
+
+You '''configure your dataspectsSystem production instance's proxy''' so that it will serve your dataspectsSystem test instance at a different host name.
+
+<syntaxhighlight lang="bash">
+# Find NGINX conf files
+user@dockerserver:~$ docker volume ls | grep nginx       # This will reveal the Docker volume name running the proxy
+user@dockerserver:~$ docker inspect <nginx_volume_name>  # This will reveal the mountpoint of the Docker volume running the proxy
+user@dockerserver:~$ cd <Mountpoint>
+# Copy NGINX conf file
+user@dockerserver:<Mountpoint>$ cp production.conf test.conf
+# Edit hosts
+user@dockerserver:~$ vi /etc/hosts
+</syntaxhighlight>
+
+{| class="wikitable" width="100%"
+! width="50%" |<nginx_volume_name>/production.conf
+!<nginx_volume_name>/test.conf
+|-
+|
+<syntaxhighlight lang="bash">
+server {
+    listen 80;
+    # Point this to 127.0.0.1 in /etc/hosts
+    server_name localdataspectssystem;
+
+    location / {
+        proxy_pass http://mediawikiservice;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+</syntaxhighlight>
+|
+<syntaxhighlight lang="bash">
+server {
+    listen 80;
+    # Point this to 127.0.0.1 in /etc/hosts
+    server_name localdataspectssystemclone;
+
+    location / {
+        proxy_pass http://mediawikiservice;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+</syntaxhighlight>
+|}
+
+{{Annotation
+|AnnotationPredicate=IsAnInstanceOf
+|AnnotationObjects=C0169948125
+}}

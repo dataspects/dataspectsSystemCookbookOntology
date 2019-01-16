@@ -1,0 +1,61 @@
+{{Recipe
+|HasEntityTitle=Indexing file system directories
+}}
+
+== Understanding ==
+
+{|class=wikitable width=100%
+|width=50%|
+ '''user@fileserver:~$ tree'''
+<syntaxhighlight lang="bash">
+. # Showing only relevant files!
+├── dataspects-indexing-service
+│   └── config
+│       ├── master.key
+│       └── credentials.yml.enc
+├── dataspects-indexer
+│   ├── dataspects.db                  # Logging database
+│   ├── dataspects-indexer             # Go binary
+│   └── dataspects-indexer-config.json # Indexer configuration
+└── documents_to_index
+</syntaxhighlight>
+|
+ ~/dataspects-indexer/'''dataspects-indexer-config.json'''
+<syntaxhighlight lang="json">
+{
+  "TikaURL": "http://localhost:9998",
+  "FilenameRegex": ".pdf",
+  "RootFolder": "/home/user/documents_to_index",
+  "DataspectsIndexingWebserviceURL": "http://localhost:3000",
+  "TikaUsername": "USERNAME",
+  "TikaPassword": "PASSWORD",
+  "APIMasterKey": "123ABC"
+}
+</syntaxhighlight>
+|-
+|
+ ~/dataspects-indexing-service/config/'''master.key'''
+
+ {{Comment|What goes in here?}}
+|
+ ~/dataspects-indexing-service/config/'''credentials.yml.enc'''
+
+ {{Comment|What goes in here?}}
+|}
+
+== Run TIKA somewhere ==
+
+* E.g. https://github.com/LogicalSpark/docker-tikaserver e.g. served at http://localhost:9998 as part of https://github.com/dataspects/dataspectsSystem.
+
+== Run dataspects-indexing-service ==
+
+ user@fileserver:~/dataspects-indexing-service$ '''rails server'''
+
+* This serves dataspects-indexing-service at http://localhost:3000.
+* See https://github.com/dataspects/dataspects-indexing-service about installation.
+
+ {{Comment|Given the config, this should still not be a container?}}
+
+== Execute indexing ==
+
+ user@fileserver:~/dataspects-indexer$ '''./dataspects-indexer --config dataspects-indexer-config.json --indexer LEXP51'''

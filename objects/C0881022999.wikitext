@@ -25,4 +25,3 @@ Metadata:
 ==Technical background==
 …
 {{Annotation}}
-{{Context}}
