@@ -1,53 +1,162 @@
 {{Setup
-|HasEntityTitle=dataspectsSystem Dockerized Setup
+|HasEntityTitle=Dockerized dataspectsSystem
 }}
 == Clone a dataspectsSystem ==
 
-=== Step 1: Copy your dataspectsSystem production instance's docker-compose.yml===
-You '''copy your dataspectsSystem production instance's docker-compose.yml''' to run your dataspectsSystem test instance.
-
-Assuming your original dataspectsSystem is located at {{code|user@workstation:~/myDataspectsSystem}}, then make a copy like this:
-
-<syntaxhighlight lang="bash">
-user@dockerserver:~$ cp -r myDataspectsSystem myTestDataspectsSystem
-</syntaxhighlight>
-
-=== Step 2: Adjust settings in your dataspectsSystem test instance's docker-compose.yml===
-
-# Choose new host ports for these services:
-#* elasticsearch
-#* kibana
-#* dataspects-webservice
-# Remove proxy service and volume
-
-=== Step 3: Add settings to your dataspectsSystem production instance's proxy===
-
-You '''configure your dataspectsSystem production instance's proxy''' so that it will serve your dataspectsSystem test instance at a different host name.
-
-<syntaxhighlight lang="bash">
-# Find NGINX conf files
-user@dockerserver:~$ docker volume ls | grep nginx       # This will reveal the Docker volume name running the proxy
-user@dockerserver:~$ docker inspect <nginx_volume_name>  # This will reveal the mountpoint of the Docker volume running the proxy
-user@dockerserver:~$ cd <Mountpoint>
-# Copy NGINX conf file
-user@dockerserver:<Mountpoint>$ cp production.conf test.conf
-# Edit hosts
-user@dockerserver:~$ vi /etc/hosts
-</syntaxhighlight>
+=== docker-compose.yml files ===
 
 {| class="wikitable" width="100%"
-! width="50%" |<nginx_volume_name>/production.conf
-!<nginx_volume_name>/test.conf
+! width="50%" |production/docker-compose.yml
+!test/docker-compose.yml
+|-
+|
+<syntaxhighlight lang="yaml">
+version: "3"
+services:
+  db:
+    image: mariadb:10.3.10
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlrootpass
+    volumes:
+      - mariadb_data:/var/lib/mysql
+  mediawikiservice:
+    image: dataspects/docker-apache-php-dataspects-mediawiki:1.2
+    volumes:
+      - mediawiki_root:/var/www/html/w
+      - mediawiki_conf:/etc/apache2/sites-available
+  parsoid:
+    image: dataspects/docker-parsoid:1.0
+    environment:
+      PARSOID_DOMAIN_localdataspectssystem: http://mediawikiservice/w/api.php
+  elasticsearch:
+    image: dataspects/docker-elasticsearch:6.5.4
+    environment:
+      - "ES_JAVA_OPTS=-Xms2048m -Xmx2048m"
+      - "discovery.type=single-node"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+  kibana:
+    image: kibana:6.5.4
+    environment:
+      - "ELASTICSEARCH_URL=http://elasticsearch:9200"
+  tika:
+    image: logicalspark/docker-tikaserver:1.20
+  proxy:
+    image: dataspects/docker-nginx:1.0.1
+    ports:
+      - 80:80
+    volumes:
+      - nginx_conf:/etc/nginx/conf.d
+volumes:
+  mariadb_data:
+    driver: local
+  mediawiki_root:
+    driver: local
+  mediawiki_conf:
+    driver: local
+  esdata:
+    driver: local
+  nginx_conf: # <-- This is unique to the production stack!
+    driver: local
+</syntaxhighlight>
+|
+<syntaxhighlight lang="yaml">
+version: "3"
+services: # <-- All service names get postfix _test!
+  db_test:
+    image: mariadb:10.3.10
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlrootpass
+    volumes:
+      - mariadb_data:/var/lib/mysql
+  mediawikiservice_test:
+    image: dataspects/docker-apache-php-dataspects-mediawiki:1.2
+    volumes:
+      - mediawiki_root:/var/www/html/w
+      - mediawiki_conf:/etc/apache2/sites-available
+  parsoid_test:
+    image: dataspects/docker-parsoid:1.0
+    environment:
+      PARSOID_DOMAIN_localdataspectssystem: http://mediawikiservice/w/api.php
+  elasticsearch_test:
+    image: dataspects/docker-elasticsearch:6.5.4
+    environment:
+      - "ES_JAVA_OPTS=-Xms2048m -Xmx2048m"
+      - "discovery.type=single-node"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+  kibana_test:
+    image: kibana:6.5.4
+    environment:
+      - "ELASTICSEARCH_URL=http://elasticsearch_test:9200"
+  tika_test:
+    image: logicalspark/docker-tikaserver:1.20
+volumes:
+  mariadb_data:
+    driver: local
+  mediawiki_root:
+    driver: local
+  mediawiki_conf:
+    driver: local
+  esdata:
+    driver: local
+networks: # <-- This is unique to the test stack!
+  default:
+    external:
+      name: production_default
+</syntaxhighlight>
+|}
+
+=== /etc/hosts ===
+
+<syntaxhighlight lang="bash">
+10.100.0.123            dataspects.local
+10.100.0.123            test.dataspects.local
+10.100.0.123            kibana.dataspects.local
+10.100.0.123            kibana.test.dataspects.local
+10.100.0.123            tika.dataspects.local
+10.100.0.123            tika.test.dataspects.local
+</syntaxhighlight>
+
+=== <nginx_conf_volume_name> ===
+
+{| class="wikitable" width="100%"
+! width="50%" |<nginx_conf_volume_name>/production.conf
+!<nginx_conf_volume_name>/test.conf
 |-
 |
 <syntaxhighlight lang="bash">
 server {
     listen 80;
-    # Point this to 127.0.0.1 in /etc/hosts
-    server_name localdataspectssystem;
-
+    server_name dataspects.local;
     location / {
         proxy_pass http://mediawikiservice;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+server {
+    listen 80;
+    server_name kibana.dataspects.local;
+    location / {
+        proxy_pass http://kibana:5601;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+server {
+    listen 80;
+    server_name tika.dataspects.local;
+    location / {
+        proxy_pass http://tika:9998;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -59,21 +168,39 @@ server {
 <syntaxhighlight lang="bash">
 server {
     listen 80;
-    # Point this to 127.0.0.1 in /etc/hosts
-    server_name localdataspectssystemclone;
-
+    server_name test.dataspects.local;
     location / {
-        proxy_pass http://mediawikiservice;
+        proxy_pass http://mediawikiservice_test;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
+
+server {
+    listen 80;
+    server_name kibana.test.dataspects.local;
+    location / {
+        proxy_pass http://kibana_test:5601;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+server {
+    listen 80;
+    server_name tika.test.dataspects.local;
+    location / {
+        proxy_pass http://tika_test:9998;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
 </syntaxhighlight>
 |}
-
-{{Annotation
-|AnnotationPredicate=IsAnInstanceOf
-|AnnotationObjects=C0169948125
-}}

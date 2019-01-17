@@ -81,3 +81,8 @@ end
 == Federated search engine ==
 
 {{code|webservice}} '''serves the endpoints''' specified in https://github.com/dataspects/dataspects-webservice/blob/master/config/routes.rb at https://webservice.dataspects.com.
+
+{{Annotation
+|AnnotationPredicate=IsAnInstanceOf
+|AnnotationObjects=C0169948125
+}}

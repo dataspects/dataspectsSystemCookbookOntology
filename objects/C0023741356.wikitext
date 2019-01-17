@@ -9,38 +9,35 @@
  '''user@fileserver:~$ tree'''
 <syntaxhighlight lang="bash">
 . # Showing only relevant files!
-├── dataspects-indexing-service
-│   └── config
-│       ├── master.key
-│       └── credentials.yml.enc
-├── dataspects-indexer
+├── dataspects-indexer                 # Normal folder
 │   ├── dataspects.db                  # Logging database
-│   ├── dataspects-indexer             # Go binary
+│   ├── dataspects-indexer             # Go binary from Git repo
 │   └── dataspects-indexer-config.json # Indexer configuration
 └── documents_to_index
 </syntaxhighlight>
+
+'''Docker Container "dataspects-indexing-service"''' (https://github.com/dataspects/dataspects-indexing-service)
+* --env MASTERKEY=
+* --volume [https://github.com/dataspects/FindAndLearnIndexerClasses FindAndLearnIndexerClasses]:/lib/custom-indexer-classes # Git repo volumed into container
+* (No ports exposed since it's going through NGNIX reverse proxy)
+
 |
  ~/dataspects-indexer/'''dataspects-indexer-config.json'''
 <syntaxhighlight lang="json">
 {
-  "TikaURL": "http://localhost:9998",
   "FilenameRegex": ".pdf",
   "RootFolder": "/home/user/documents_to_index",
-  "DataspectsIndexingWebserviceURL": "http://localhost:3000",
+  "DataspectsIndexingWebserviceURL": "https://indexer.hapa.ch", # Points to NGINX reverse proxy
+  "TikaURL": "https://tika.hapa.ch", # Points to NGINX reverse proxy
   "TikaUsername": "USERNAME",
   "TikaPassword": "PASSWORD",
-  "APIMasterKey": "123ABC"
+  "APIMasterKey": "",
+  "IndexerClassName": "FindAndLearnDocumentsIndexer"
 }
 </syntaxhighlight>
-|-
-|
- ~/dataspects-indexing-service/config/'''master.key'''
-
- {{Comment|What goes in here?}}
-|
- ~/dataspects-indexing-service/config/'''credentials.yml.enc'''
-
- {{Comment|What goes in here?}}
+How to get the APIMasterKey:
+# Run {{code|1=EDITOR='atom --wait' rails credentials:edit}} in {{code|~/dataspects-indexing-service}}
+# Copy {{code|api:master_key}} into {{code|APIMasterKey}}
 |}
 
 == Run TIKA somewhere ==
