@@ -1,0 +1,56 @@
+graph LR
+  proxy -->|test.dataspects.local| mediawikiservice_test
+  proxy -->|kibana.test.dataspects.local| kibana_test
+  proxy -->|tika.test.dataspects.local| tika_test
+
+subgraph DockerStack 'PRODUCTION'
+
+  mediawikiservice[DockerService<br>'mediawikiservice']
+  proxy[DockerService<br>'proxy'<br>listen 80]
+  db[DockerService<br>'db']
+  parsoid[DockerService<br>'parsoid']
+  elasticsearch[DockerService<br>'elasticsearch']
+  kibana[DockerService<br>'kibana']
+  tika[DockerService<br>'tika']
+
+production_mediawiki_root[DockerVolume<br>'production_mediawiki_root']
+production_mediawiki_conf[DockerVolume<br>'production_mediawiki_conf']
+production_mariadb_data[DockerVolume<br>'production_mariadb_data']
+production_esdata[DockerVolume<br>'production_esdata']
+production_nginx_conf[DockerVolume<br>'production_nginx_conf']
+
+  mediawikiservice -.- production_mediawiki_root
+  mediawikiservice -.- production_mediawiki_conf
+  proxy -->|dataspects.local| mediawikiservice
+  proxy -->|kibana.dataspects.local| kibana
+  proxy -->|tika.dataspects.local| tika
+  proxy -.- production_nginx_conf
+  db -.- production_mariadb_data
+  parsoid
+  elasticsearch -.- production_esdata
+  kibana
+  tika
+end
+
+subgraph DockerStack 'TEST'
+
+  mediawikiservice_test[DockerService<br>'mediawikiservice_test']
+  db_test[DockerService<br>'db_test']
+  parsoid_test[DockerService<br>'parsoid_test']
+  elasticsearch_test[DockerService<br>'elasticsearch_test']
+  kibana_test[DockerService<br>'kibana_test']
+  tika_test[DockerService<br>'tika_test']
+
+test_mediawiki_root[DockerVolume<br>'test_mediawiki_root']
+test_mediawiki_conf[DockerVolume<br>'test_mediawiki_conf']
+test_mariadb_data[DockerVolume<br>'test_mariadb_data']
+test_esdata[DockerVolume<br>'test_esdata']
+
+  mediawikiservice_test -.- test_mediawiki_root
+  mediawikiservice_test -.- test_mediawiki_conf
+  db_test -.- test_mariadb_data
+  parsoid_test
+  elasticsearch_test -.- test_esdata
+  kibana_test
+  tika_test
+end
