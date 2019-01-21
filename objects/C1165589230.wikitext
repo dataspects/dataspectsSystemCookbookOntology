@@ -1,0 +1,3 @@
+{{SystemComponent
+|HasEntityTitle=GoLangBinary dataspects-indexer
+}}

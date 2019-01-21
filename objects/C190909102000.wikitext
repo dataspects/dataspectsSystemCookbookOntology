@@ -1,3 +1,20 @@
 {{RubyGem
 |HasEntityTitle=dataspects
 }}
+
+== {{Property|Requires|Ruby}} ==
+
+https://rvm.io/rvm/install
+
+== {{Property|CanBeInstalled|Yes}} ==
+
+<syntaxhighlight lang="bash">
+# user@workstation:~$
+  git clone git@github.com:dataspects/dataspects.git
+  cd dataspects/
+  rake gem
+  cd pkg/
+  gem install dataspects-<version>.gem
+</syntaxhighlight>
+
+== {{Property|CanBeDeveloped|Yes}} ==

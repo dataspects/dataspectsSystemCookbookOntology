@@ -1,0 +1,10 @@
+{{SystemComponent
+|HasEntityTitle=dataspects-search-service
+|HasEntityBlurb=Search API
+}}
+{{Property|HasGitHubRepository|https://github.com/dataspects/dataspects-indexing-service}}
+{{Annotation
+|AnnotationPredicate=Requires
+|AnnotationObjects=C190909102000
+}}
+== {{Property|CanBeDeveloped|Yes}} ==

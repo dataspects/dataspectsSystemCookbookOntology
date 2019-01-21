@@ -1,5 +1,28 @@
 {{SystemComponent
-|HasEntityTitle=dataspects-webservice
+|HasEntityTitle=dataspects-indexing-service
 }}
+{{Property|HasGitHubRepository|https://github.com/dataspects/dataspects-indexing-service}}
+{{Annotation
+|AnnotationPredicate=Requires
+|AnnotationObjects=C190909102000
+}}
+== {{Property|CanBeDeveloped|Yes}} ==
 
-{{code|dataspects-webservice}} hosts its source at {{Property|HasGitHubRepository|https://github.com/dataspects/dataspects-webservice}}.
+For developing [[{{PAGENAME}}]] run it locally:
+
+ user@workstation:~$ git clone https://github.com/dataspects/dataspects-indexing-service
+ user@workstation:~$ cd dataspects-indexing-service
+ user@workstation:~/dataspects-indexing-service$ bundle install
+ user@workstation:~/dataspects-indexing-service$ rails server
+
+* This serves dataspects-indexing-service at http://localhost:3000.
+
+== APIKey ==
+
+# The APIKey must be provided by tools like [[C1165589230]] to connect to [[{{PAGENAME}}]].
+# [[{{PAGENAME}}]] contains an encrypted APIKey at {{code|config/credentials.yml.enc}}.
+# {{code|config/master.key}} contains the {{code|RAILS_MASTER_KEY}} which is used for en-/decrypting {{code|config/credentials.yml.enc}}. (https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
+
+=== How to view/edit the encrypted APIKey in {{code|config/credentials.yml.enc}} ===
+
+  user@workstation:~/dataspects-indexing-service$ RAILS_MASTER_KEY=XXX EDITOR=vim rails credentials:edit

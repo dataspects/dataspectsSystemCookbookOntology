@@ -1,6 +1,19 @@
 {{Setup
 |HasEntityTitle=Dockerized dataspectsSystem
 }}
+== System Components ==
+
+=== Public Docker images ===
+
+Hosted at https://hub.docker.com/r/dataspects/
+
+=== Private Docker images ===
+
+Hosted at https://aws.amazon.com/ecr/ (see [[C181015155822]])
+
+* [[C190110142823]]
+* [[C1788953660]]
+
 == Clone a dataspectsSystem e.g. for testing ==
 
 === Idea ===

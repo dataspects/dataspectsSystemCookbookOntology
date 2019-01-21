@@ -35,9 +35,7 @@
   "IndexerClassName": "FindAndLearnDocumentsIndexer"
 }
 </syntaxhighlight>
-How to get the APIMasterKey:
-# Run {{code|1=EDITOR='atom --wait' rails credentials:edit}} in {{code|~/dataspects-indexing-service}}
-# Copy {{code|api:master_key}} into {{code|APIMasterKey}}
+[[C190110142823|How to get the APIMasterKey]]
 |}
 
 == Run TIKA somewhere ==
@@ -46,12 +44,7 @@ How to get the APIMasterKey:
 
 == Run dataspects-indexing-service ==
 
- user@fileserver:~/dataspects-indexing-service$ '''rails server'''
-
-* This serves dataspects-indexing-service at http://localhost:3000.
-* See https://github.com/dataspects/dataspects-indexing-service about installation.
-
- {{Comment|Given the config, this should still not be a container?}}
+[[C190110142823]]
 
 == Execute indexing ==
 
