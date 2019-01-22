@@ -1,0 +1,7 @@
+{{{info|add title=New BusinessService|edit title=Edit BusinessService|page name=C<unique number;random;10>}}}
+
+{{FormHeader|BusinessService}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

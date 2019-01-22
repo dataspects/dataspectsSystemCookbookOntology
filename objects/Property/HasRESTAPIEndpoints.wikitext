@@ -1,0 +1,4 @@
+{{PropertyPage
+|PropertyType=URL
+}}
+[[Category:dataspectsSystemCookbookOntology]]

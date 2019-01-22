@@ -2,7 +2,9 @@
 ** mainpage|mainpage-description
 ** recentchanges-url|recentchanges
 * dataspects
+** Keywords|Keywords
 ** Contexts|Contexts
+** Properties|Properties
 ** C180913155815|EKM Aspects
 ** Entity Types|Entity Types
 ** Domain Terms|Domain Terms

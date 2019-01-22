@@ -1,12 +1,11 @@
 {{SystemComponent
 |HasEntityTitle=dataspects-indexing-service
 }}
-{{Property|HasGitHubRepository|https://github.com/dataspects/dataspects-indexing-service}}
-{{Annotation
-|AnnotationPredicate=Requires
-|AnnotationObjects=C190909102000
-}}
-== {{Property|CanBeDeveloped|Yes}} ==
+== Include custom indexers classes ==
+
+[https://github.com/dataspects/dataspects-indexing-service/blob/master/config/initializers/indexers.rb config/initializers/indexers.rb] provides the functionality to include [[C1641249569|custom indexers]].
+
+== {{Property|CanBeDeveloped|Yes}}==
 
 For developing [[{{PAGENAME}}]] run it locally:
 
@@ -17,12 +16,26 @@ For developing [[{{PAGENAME}}]] run it locally:
 
 * This serves dataspects-indexing-service at http://localhost:3000.
 
-== APIKey ==
+== Securing access to [[{{PAGENAME}}]] by an APIKey ==
 
-# The APIKey must be provided by tools like [[C1165589230]] to connect to [[{{PAGENAME}}]].
-# [[{{PAGENAME}}]] contains an encrypted APIKey at {{code|config/credentials.yml.enc}}.
-# {{code|config/master.key}} contains the {{code|RAILS_MASTER_KEY}} which is used for en-/decrypting {{code|config/credentials.yml.enc}}. (https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
+# When tools (e.g. [[C1165589230]]) connect to [[{{PAGENAME}}]]'s endpoints they need to include an APIKey in their JSON payload.
+# [[{{PAGENAME}}]] contains an encrypted version of the currently set APIKey in {{code|config/credentials.yml.enc}}.
+# In order to:
+#* view the currently set APIKey, and
+#* enable Rails to read the currently set APIKey when serving endpoints<br>you need to create {{code|config/master.key}} containing the {{code|RAILS_MASTER_KEY}} which is used for en-/decrypting {{code|config/credentials.yml.enc}}. (https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
 
-=== How to view/edit the encrypted APIKey in {{code|config/credentials.yml.enc}} ===
+=== How to view/edit the encrypted APIKey in {{code|config/credentials.yml.enc}}===
 
-  user@workstation:~/dataspects-indexing-service$ RAILS_MASTER_KEY=XXX EDITOR=vim rails credentials:edit
+  user@workstation:~/dataspects-indexing-service$ EDITOR=vim rails credentials:edit
+{{Annotation
+|AnnotationPredicate=Requires
+|AnnotationObjects=C190909102000
+}}
+{{Annotation
+|AnnotationPredicate=HasGitHubRepository
+|AnnotationObjects=https://github.com/dataspects/dataspects-indexing-service
+}}
+{{Annotation
+|AnnotationPredicate=HasRESTAPIEndpoints
+|AnnotationObjects=https://github.com/dataspects/dataspects-indexing-service/blob/master/config/routes.rb
+}}

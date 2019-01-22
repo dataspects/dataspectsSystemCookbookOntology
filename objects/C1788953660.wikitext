@@ -2,7 +2,7 @@
 |HasEntityTitle=dataspects-search-service
 |HasEntityBlurb=Search API
 }}
-{{Property|HasGitHubRepository|https://github.com/dataspects/dataspects-indexing-service}}
+{{Property|HasGitHubRepository|https://github.com/dataspects/dataspects-search-service}}
 {{Annotation
 |AnnotationPredicate=Requires
 |AnnotationObjects=C190909102000

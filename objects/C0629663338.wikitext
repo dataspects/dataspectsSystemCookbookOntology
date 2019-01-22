@@ -1,0 +1,38 @@
+{{SystemComponent
+|HasEntityTitle=Custom indexer classes for dataspects-indexing-service
+}}
+== {{Property|CanBeDeveloped|Yes}}==
+
+[[C1641249569|Learn how to include custom indexers]].
+
+A custom indexer class must be implemented in accordance with this template:
+
+<syntaxhighlight lang="Ruby">
+# dataspects-indexing-service/lib/indexers/YourIndexerClasses/your_first_indexer.rb
+class YourFirstIndexer < Dataspects::Indexer
+
+  def initialize
+    @profilesURL = 'lib/indexers/YourIndexerClasses/profiles.yml' # `pwd` here is dataspects-indexing-service/
+    @elasticsearchClusterLabel = 'elasticsearchlocal'             # The label refers to an entry in @profiles
+    @indexName =
+    super                                                         # Dataspects::Indexer.initialize provides @elasticsearchCluster and @profiles
+  end
+
+  def store_to_index(document)                                    # Called dataspects-indexing-service/app/controllers/document_controller.rb
+
+  end
+
+end
+</syntaxhighlight>
+
+<syntaxhighlight lang="Ruby">
+# dataspects-indexing-service/lib/indexers/YourIndexerClasses/profiles.yml
+---
+elasticsearchlocal:
+  elasticsearch_cluster_url: http://elasticsearch.localhost
+tikalocal:
+  tika_server_url: http://tika.localhost
+</syntaxhighlight>
+{{Context
+|HasContext=C190110142823
+}}
