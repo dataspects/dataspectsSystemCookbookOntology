@@ -14,18 +14,19 @@ dataspects recommends https://www.semantic-mediawiki.org as its wiki component.
 
 === Step 2: Get software and set permissions ===
 
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data$ '''git clone -b {{my|REL1_31}} --single-branch https://github.com/wikimedia/mediawiki.git w/'''}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data$ '''git clone -b {{my|REL1_31}} --depth 1 --single-branch https://github.com/wikimedia/mediawiki.git w/'''}}
 #* https://github.com/wikimedia/mediawiki/branches/active
 # {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''git submodule update --init --recursive'''}}
 # {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''chown -R www-data .'''}}
 # Install PHP Composer: https://getcomposer.org/download/
+#* {{code|user@dockerserver:~$ docker exec -it wikidataspectslocal_mediawikiservice_1 /bin/bash}}
 # {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && php composer.phar install"'''}}
 
 === Step 3: Configure and run MediaWiki installation script ===
 
 # Place a copy of https://github.com/dataspects/dataspectsSystem/blob/master/ansible_templates/install_mediawiki.sh.j2 as {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/install_mediawiki.sh}}
 # Configure {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/install_mediawiki.sh}}
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && ./install.sh"'''}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && ./install_mediawiki.sh"'''}}
 
 === Step 4: Add fundamental settings to LocalSetting.php ===
 
