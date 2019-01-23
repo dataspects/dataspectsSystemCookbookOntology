@@ -1,0 +1,64 @@
+{{SystemComponent
+|HasEntityTitle=wiki.dataspectsSystem
+|HasEntityBlurb='''wiki.dataspectsSystem''' is the '''primary platform''' to '''manage knowledge as connected entities''' organized by the principles of '''https://everypageispageone.com/the-book'''.
+}}
+dataspects recommends https://www.semantic-mediawiki.org as its wiki component.
+
+== {{Property|CanBeInstalled|Yes}} ==
+
+ {{code|{{my|'''Versioning'''}}}} | {{code|{{mlb|'''docker exec'''}}}}
+
+=== Step 1: Prepare Docker containers and volumes ===
+
+# [[C0169948125]]
+
+=== Step 2: Get software and set permissions ===
+
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data$ '''git clone -b {{my|REL1_31}} --single-branch https://github.com/wikimedia/mediawiki.git w/'''}}
+#* https://github.com/wikimedia/mediawiki/branches/active
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''git submodule update --init --recursive'''}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''chown -R www-data .'''}}
+# Install PHP Composer: https://getcomposer.org/download/
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && php composer.phar install"'''}}
+
+=== Step 3: Configure and run MediaWiki installation script ===
+
+# Place a copy of https://github.com/dataspects/dataspectsSystem/blob/master/ansible_templates/install_mediawiki.sh.j2 as {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/install_mediawiki.sh}}
+# Configure {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/install_mediawiki.sh}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && ./install.sh"'''}}
+
+=== Step 4: Add fundamental settings to LocalSetting.php ===
+
+:::<syntaxhighlight lang="php">
+ $wgArticlePath = '/wiki/$1';
+ $wgServer = "???";
+ $wgEnableUploads = true;
+</syntaxhighlight>
+
+=== Step 5: Add https://www.mediawiki.org/wiki/Extension:VisualEditor ===
+
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w/extensions$ '''git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/VisualEditor.git'''}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w/extensions/VisualEditor$ '''git checkout {{my|REL1_31}}'''}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w/extensions/VisualEditor$ '''git submodule update --init'''}}
+# Add settings to LocalSetting.php:
+#:<syntaxhighlight lang="php">
+wfLoadExtension( 'VisualEditor' );
+$wgDefaultUserOptions['visualeditor-enable'] = 1;
+$wgHiddenPrefs[] = 'visualeditor-enable';
+$wgVirtualRestConfig['modules']['parsoid'] = array('url' => 'http://parsoid:8000');
+wfLoadExtension( 'WikiEditor' );
+$wgHiddenPrefs[] = 'usebetatoolbar';
+</syntaxhighlight>
+
+=== Step 5: Add https://www.semantic-mediawiki.org ===
+
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w; php composer.phar require mediawiki/semantic-media-wiki '~{{my|3.0}}' --update-no-dev"'''}}
+# Add settings to LocalSetting.php:
+#:<syntaxhighlight lang="php">
+enableSemantics( 'localhost' );
+</syntaxhighlight>
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && php maintenance/update.php --skip-external-dependencies"'''}}
+
+{{Context
+|HasContext=C0169948125
+}}

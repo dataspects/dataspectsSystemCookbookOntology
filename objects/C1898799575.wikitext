@@ -1,7 +1,28 @@
 {{BusinessService
 |HasEntityTitle=dataspectsSystem
 }}
-== {{Property|CanBeDeveloped|Yes}}==
+== {{Property|CanBeDeveloped|Yes}} ==
+
+== {{Property|MustBeMaintained|Yes}} ==
+
+=== Step 1: Check your Docker server's resources ===
+
+* RAM
+* Disk space
+
+=== Step 2: Check your Docker server for docker-compose.yml files ===
+
+ user@dockerserver:~$ '''find / -iname docker-compose.yml'''
+
+=== Step 3: Check for and perform Docker image upgrades ===
+
+# Check currently run versions by {{code|user@dockerserver:~/your_dataspects_system_instance_folder$ '''grep image: docker-compose.yml'''}}
+# Check registries for newer tags:
+#* [[C181015155822]]
+#* https://hub.docker.com/r/dataspects/
+# Edit {{code|docker-compose.yml}}
+# Run {{code|docker-compose stop && docker-compose up --detach}}
+
 {{Context
 |HasContext=C0169948125
 }}
