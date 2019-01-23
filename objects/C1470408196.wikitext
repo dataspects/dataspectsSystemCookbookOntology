@@ -35,29 +35,16 @@ dataspects recommends https://www.semantic-mediawiki.org as its wiki component.
  $wgEnableUploads = true;
 </syntaxhighlight>
 
-=== Step 5: Add https://www.mediawiki.org/wiki/Extension:VisualEditor ===
+=== Step 5: Configure and run MediaWiki extensions installation ===
 
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w/extensions$ '''git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/VisualEditor.git'''}}
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w/extensions/VisualEditor$ '''git checkout {{my|REL1_31}}'''}}
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w/extensions/VisualEditor$ '''git submodule update --init'''}}
-# Add settings to LocalSetting.php:
-#:<syntaxhighlight lang="php">
-wfLoadExtension( 'VisualEditor' );
-$wgDefaultUserOptions['visualeditor-enable'] = 1;
-$wgHiddenPrefs[] = 'visualeditor-enable';
-$wgVirtualRestConfig['modules']['parsoid'] = array('url' => 'http://parsoid:8000');
-wfLoadExtension( 'WikiEditor' );
-$wgHiddenPrefs[] = 'usebetatoolbar';
-</syntaxhighlight>
-
-=== Step 5: Add https://www.semantic-mediawiki.org ===
-
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w; php composer.phar require mediawiki/semantic-media-wiki '~{{my|3.0}}' --update-no-dev"'''}}
-# Add settings to LocalSetting.php:
-#:<syntaxhighlight lang="php">
-enableSemantics( 'localhost' );
-</syntaxhighlight>
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && php maintenance/update.php --skip-external-dependencies"'''}}
+# Place copies of:
+#* https://github.com/dataspects/dataspectsSystem/blob/master/ansible_templates/mediawiki_extensions.yml.j2 as {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/mediawiki_extensions.yml}}
+#* https://github.com/dataspects/dataspectsSystem/blob/master/ansible_templates/install_mediawiki_extensions.rb.j2 as {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/install_mediawiki_extensions.rb}}
+# Configure {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/install_mediawiki_extensions.rb}}
+#* https://github.com/wikimedia/mediawiki-extensions-VisualEditor/branches/active {{my|Version}}
+#* https://packagist.org/packages/mediawiki/semantic-media-wiki {{my|Version}}
+#* https://packagist.org/packages/mediawiki/semantic-result-formats {{my|Version}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> ruby install_mediawiki_extensions.rb'''}}
 
 {{Context
 |HasContext=C0169948125

@@ -8,7 +8,7 @@ dataspectsSystem is a '''knowledge management system''' based on
 
 Every piece of knowledge (regarding orientation, understanding, subjects, workflows and procedures) is of a distinct {{DomainTerm|Entity Types|dataspects}}. See [[C180913155815]].
 
- {{PropName|[[Property:CanBeDeveloped|CanBeDeveloped]]}} | {{PropName|[[Property:MustBeMaintained|MustBeMaintained]]}}
+ {{PropName|[[Property:CanBeDeveloped|CanBeDeveloped]]}} | {{PropName|[[Property:MustBeMaintained|MustBeMaintained]]}} | {{PropName|[[Property:CanBeInstalled|CanBeInstalled]]}}
 
 {{EntitiesByEntityType}}
 
