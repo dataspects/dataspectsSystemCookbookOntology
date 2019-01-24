@@ -7,8 +7,16 @@
 
 === Step 1: Check your Docker server's resources ===
 
+* apt update && apt upgrade
+* User "docker"
+** sudo privileges
 * RAM
 * Disk space
+* SSH
+* {{code|docker ps -a}}
+** {{code|/root/.ssh/authorized_keys}}
+* Certificates
+** Let's Encrypt Expirations
 
 === Step 2: Check your Docker server for docker-compose.yml files ===
 
@@ -22,6 +30,13 @@
 #* https://hub.docker.com/r/dataspects/
 # Edit {{code|docker-compose.yml}}
 # Run {{code|docker-compose stop && docker-compose up --detach}}
+
+=== Step 4: Websites/Apps ===
+
+* Backups
+** Crontab
+** docker ps -a
+** Destinations
 
 {{Context
 |HasContext=C0169948125

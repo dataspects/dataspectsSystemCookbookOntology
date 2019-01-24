@@ -20,13 +20,14 @@ dataspects recommends https://www.semantic-mediawiki.org as its wiki component.
 # {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''chown -R www-data .'''}}
 # Install PHP Composer: https://getcomposer.org/download/
 #* {{code|user@dockerserver:~$ docker exec -it wikidataspectslocal_mediawikiservice_1 /bin/bash}}
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && php composer.phar install"'''}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} --user www-data <container> bash -c "cd /var/www/html/w && php composer.phar install"'''}}
+#* This will currently cause ''Cannot create cache directory /var/www/.composer/cache/repo/https---repo.packagist.org/, or directory is not writable. Proceeding without cache. Cannot create cache directory /var/www/.composer/cache/files/, or directory is not writable. Proceeding without cache.''
 
 === Step 3: Configure and run MediaWiki installation script ===
 
 # Place a copy of https://github.com/dataspects/dataspectsSystem/blob/master/ansible_templates/install_mediawiki.sh.j2 as {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/install_mediawiki.sh}}
 # Configure {{code|/var/lib/docker/volumes/<VOLUME>/_data/w/install_mediawiki.sh}}
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> bash -c "cd /var/www/html/w && ./install_mediawiki.sh"'''}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} --user www-data <container> bash -c "cd /var/www/html/w && ./install_mediawiki.sh"'''}}
 
 === Step 4: Add fundamental settings to LocalSetting.php ===
 
@@ -45,7 +46,7 @@ dataspects recommends https://www.semantic-mediawiki.org as its wiki component.
 #* https://github.com/wikimedia/mediawiki-extensions-VisualEditor/branches/active {{my|Version}}
 #* https://packagist.org/packages/mediawiki/semantic-media-wiki {{my|Version}}
 #* https://packagist.org/packages/mediawiki/semantic-result-formats {{my|Version}}
-# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''{{mlb|docker exec}} <container> ruby install_mediawiki_extensions.rb'''}}
+# {{code|user@dockerserver:/var/lib/docker/volumes/<VOLUME>/_data/w$ '''ruby install_mediawiki_extensions.rb'''}}
 
 {{Context
 |HasContext=C0169948125

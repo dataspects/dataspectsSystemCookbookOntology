@@ -27,6 +27,14 @@ For developing [[{{PAGENAME}}]] run it locally:
 === How to view/edit the encrypted APIKey in {{code|config/credentials.yml.enc}}===
 
   user@workstation:~/dataspects-indexing-service$ EDITOR=vim rails credentials:edit
+
+ api:
+   key:<KEY>
+ es:
+   url: https://localhost:9200
+ tika:
+   url: https://localhost:9998
+
 {{Annotation
 |AnnotationPredicate=Requires
 |AnnotationObjects=C190909102000
