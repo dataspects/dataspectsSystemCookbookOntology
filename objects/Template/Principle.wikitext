@@ -1,0 +1,2 @@
+<includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle|{{PAGENAME}}}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=Principle}}</includeonly>
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

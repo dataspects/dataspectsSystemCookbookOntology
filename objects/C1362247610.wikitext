@@ -1,9 +1,0 @@
-{{Recipe
-|HasEntityTitle=Add/edit entities
-|IsCarriedOutByRole=User
-|ConcernsAspects=Editing
-}}
-{{Annotation
-|AnnotationPredicate=HasDatahoiPriority
-|AnnotationObjects=1
-}}

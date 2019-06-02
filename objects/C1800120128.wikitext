@@ -1,5 +1,0 @@
-{{Argument
-|HasEntityTitle=Flexibility of structure
-|HasKeyword=Structure;Ontology
-|HasEntityBlurb=The structure (ontology, "network of relations") is powerful and flexible: While it's a good idea to start with a first structure to import and create initial content, the structure is growing with the wiki. New ideas and necessary changes can be integrated easily and updated with a few clicks. Even more, the growing structure is not just a technical, alimental skeleton, but an integral part of the content in the wiki and an additional source of newly created knowledge.
-}}

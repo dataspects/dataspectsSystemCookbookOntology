@@ -1,3 +1,0 @@
-{{SystemComponent
-|HasEntityTitle=User GnuPG keys
-}}

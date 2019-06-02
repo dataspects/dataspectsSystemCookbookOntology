@@ -1,0 +1,3 @@
+<includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=IndexingSetup}}
+</includeonly>
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

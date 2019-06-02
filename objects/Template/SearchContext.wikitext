@@ -1,0 +1,10 @@
+<includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=SearchContext}}
+</includeonly>
+
+== Entities belonging to {{PAGENAME}} ==
+
+{{#ask:[[BelongsToSearchContext::{{PAGENAME}}]]
+|format=ul
+}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

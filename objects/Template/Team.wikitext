@@ -1,0 +1,9 @@
+<includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=Team}}
+== Members ==
+
+{{#ask:[[IsMemberOf::{{PAGENAME}}]]
+|format=ul
+}}
+</includeonly>
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

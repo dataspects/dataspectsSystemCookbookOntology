@@ -1,6 +1,0 @@
-{{Role
-|HasEntityTitle=Ontology Designer
-|HasEntityBlurb=#Facet management
-#Type management
-#Property management
-}}

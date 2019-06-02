@@ -1,0 +1,15 @@
+<includeonly>|-
+|{{{2}}}
+|style="border-bottom:1px solid gray;"|<span style="font-size:20px;">[[{{{1}}}]]</span>{{#if:{{{3|}}}|
+{{{3}}}|}}
+{{#ask:[[-Has subobject::{{{1}}}]][[AnnotationPredicate::+]]
+|mainlabel=-
+|?AnnotationPredicate
+|?AnnotationObject
+|?AnnotationType
+|sort=AnnotationPredicate
+|format=template
+|template=AnnotationResultItem
+|link=none
+}}
+|-</includeonly><noinclude>[[Category:DataspectsSystemCookbookOntology]]</noinclude>

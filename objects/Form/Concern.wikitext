@@ -1,0 +1,8 @@
+{{{info|add title=New Concern|edit title=Edit Concern|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Concern}}
+{{DataspectsCookbookEntityTypeSpecialFormTemplate0}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]][[Category:EnterpriseKnowledgeManagementAspectsOntology]]</noinclude>

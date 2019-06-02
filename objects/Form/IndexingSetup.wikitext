@@ -1,0 +1,7 @@
+{{{info|add title=New IndexingSetup|edit title=Edit IndexingSetup|page name=C<unique number;random;10>}}}
+
+{{FormHeader|IndexingSetup}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

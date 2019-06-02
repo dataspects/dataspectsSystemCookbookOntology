@@ -1,0 +1,7 @@
+{{{info|add title=New ResourceSiloType|edit title=Edit ResourceSiloType|page name=C<unique number;random;10>}}}
+
+{{FormHeader|ResourceSiloType}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

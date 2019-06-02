@@ -1,0 +1,6 @@
+<includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=Ontology}}
+{{Annotation
+  |AnnotationPredicate=DependsOn
+  |AnnotationObjects={{{DependsOn|}}}
+}}
+{{OntologyComponentsTable|ContentReferenceCategory=Category:{{{HasEntityTitle}}}}}</includeonly><noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

@@ -1,3 +1,0 @@
-{{Responsibility
-|HasEntityTitle=Maximize information coherence
-}}

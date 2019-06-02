@@ -1,0 +1,7 @@
+{{{info|add title=New Principle|edit title=Edit Principle|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Principle}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

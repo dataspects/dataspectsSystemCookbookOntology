@@ -1,0 +1,7 @@
+{{{info|add title=New UsabilityCondition|edit title=Edit UsabilityCondition|page name=C<unique number;random;10>}}}
+
+{{FormHeader|UsabilityCondition}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

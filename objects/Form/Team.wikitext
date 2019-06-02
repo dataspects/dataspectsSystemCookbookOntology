@@ -1,0 +1,7 @@
+{{{info|add title=New Team|edit title=Edit Team|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Team}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

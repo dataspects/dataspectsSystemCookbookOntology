@@ -1,0 +1,7 @@
+{{{info|add title=New ResourceIndexerClass|edit title=Edit ResourceIndexerClass|page name=C<unique number;random;10>}}}
+
+{{FormHeader|ResourceIndexerClass}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

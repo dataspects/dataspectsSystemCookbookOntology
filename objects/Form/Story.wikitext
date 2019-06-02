@@ -1,0 +1,7 @@
+{{{info|add title=New Story|edit title=Edit Story|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Story}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

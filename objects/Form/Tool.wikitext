@@ -1,0 +1,7 @@
+{{{info|add title=New Tool|edit title=Edit Tool|page name=C<unique number;random;10>}}}
+
+{{FormHeader|Tool}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

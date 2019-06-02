@@ -1,0 +1,15 @@
+<includeonly>
+{|class=wikitable width=100%
+!width=20%|[[{{{1|}}}]]
+!width=40%|HasResourceSelectionCode
+!width=40%|HasResourceEnitizationCode
+|-
+|rowspan=3|{{#lsth:{{{1}}}|Workflow}}
+|{{#lsth:{{{1}}}|HasResourceSelectionCode}}
+|{{#lsth:{{{1}}}|HasResourceEnitizationCode}}
+|-
+!colspan=2|HasIndexingExecutionCode
+|-
+|colspan=2|{{#lsth:{{{1}}}|HasIndexingExecutionCode}}
+|}
+</includeonly><noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

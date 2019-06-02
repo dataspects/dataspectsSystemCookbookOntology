@@ -1,0 +1,7 @@
+{{{info|add title=New ResourceType|edit title=Edit ResourceType|page name=C<unique number;random;10>}}}
+
+{{FormHeader|ResourceType}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

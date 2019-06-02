@@ -1,9 +1,0 @@
-{{Diagram
-|HasEntityTitle=dataspectsSearch system backup with duplicity
-|HasDrawIoURL=https://drive.google.com/a/dataspects.com/uc?id=0B1LNGPG7-v6OZWlSVl96ZzM3U3M
-}}
-
-{{Annotation
-|AnnotationPredicate=Explains
-|AnnotationObjects=Which software packages are necessary
-}}

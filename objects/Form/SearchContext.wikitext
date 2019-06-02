@@ -1,0 +1,7 @@
+{{{info|add title=New SearchContext|edit title=Edit SearchContext|page name=C<unique number;random;10>}}}
+
+{{FormHeader|SearchContext}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

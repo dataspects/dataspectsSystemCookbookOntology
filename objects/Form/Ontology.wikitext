@@ -1,0 +1,7 @@
+{{{info|add title=New Ontology|edit title=Edit Ontology|page name=C<unique number;random;10>}}}
+{{FormHeader|Ontology}}
+  !DependsOn
+  |{{{field|DependsOn|input type=dropdown|values from category=Ontology}}}
+{{StandardFormSections}}
+{{FormFooter}}
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>

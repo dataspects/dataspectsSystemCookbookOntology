@@ -1,9 +1,0 @@
-{{Diagram
-|HasEntityTitle=dataspectsSearch system module layers diagram
-|HasDrawIoURL=https://drive.google.com/a/dataspects.com/uc?id=1fsrfNd4W7wAltdDawkvjpY120vQSuWH1
-}}
-
-{{Annotation
-|AnnotationPredicate=Explains
-|AnnotationObjects=dataspectsSearch core and custom modules
-}}

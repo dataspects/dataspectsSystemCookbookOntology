@@ -1,0 +1,5 @@
+{{PropertyPage
+|SMWHasType=Text
+|PredicateClass=PassiveAction
+}}
+[[Category:dataspectsSystemCookbookOntology]]

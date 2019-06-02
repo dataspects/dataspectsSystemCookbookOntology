@@ -1,8 +1,0 @@
-{{Concept
-|HasEntityTitle=Manage Domain Terms
-}}
-{{Annotation
-|AnnotationPredicate=HasDatahoiPriority
-|AnnotationObjects=1
-}}
-Create based on https://smw-cindykate.com/main/Component1315963214.

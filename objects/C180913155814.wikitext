@@ -1,8 +1,0 @@
-{{Concept
-|HasEntityTitle=full_text/query_string
-|HasEntityKeyword=Elastic
-|HasEntityBlurb=The query_string query parses the input and splits text around operators. Each textual part is analyzed independently of each other.
-}}
-{{Property|HasElasticConceptType|QueryType}}
-
-https://www.elastic.co/guide/en/Elastic/reference/current/query-dsl-query-string-query.html

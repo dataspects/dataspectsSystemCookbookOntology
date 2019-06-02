@@ -1,0 +1,5 @@
+{{PropertyPage
+|SMWHasType=Page
+|PredicateClass=ActiveAction
+}}
+[[Category:dataspectsSystemCookbookOntology]]

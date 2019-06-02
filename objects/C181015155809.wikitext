@@ -1,6 +1,0 @@
-{{Recipe
-|HasEntityTitle=Customize a SMW-resource-born entity's sHasResourceURL for indexing
-}}
-
-# In your Indexer file add method "def sHasResourceURL" to Dataspects::SemanticMediaWikiPage
-# Use any of Dataspects::SemanticMediaWikiPage's public methods as building blocks

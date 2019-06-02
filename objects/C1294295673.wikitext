@@ -1,7 +1,0 @@
-{{Argument
-|HasEntityTitle=Search result views have a unique reference URL
-|HasKeyword=search;search results;facets;search filter
-|HasEntityBlurb=Search results offer a wide range of details (show values, entities, facets) to specify, filter and drilldown results. Each result display/view gets a unique URL in the wiki, so that it can be referenced (i.e. the link forwarded, included in other wiki pages.)
-}}
-
-{{Annotation}}

@@ -1,0 +1,7 @@
+<includeonly>{{METADATA|Keywords={{{HasKeyword|}}}|HasEntityTitle={{{HasEntityTitle}}}|HasEntityBlurb={{{HasEntityBlurb|}}}|HasEntityType=Concern}}
+{{DataspectsCookbookEntityTypeSpecialTemplateTemplate0
+|IsAssumedByRole={{{IsAssumedByRole|}}}
+|ConcernsAspects={{{ConcernsAspects|}}}
+}}
+</includeonly>
+<noinclude>[[Category:dataspectsSystemCookbookOntology]][[Category:EnterpriseKnowledgeManagementAspectsOntology]]</noinclude>

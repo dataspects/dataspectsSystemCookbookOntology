@@ -1,0 +1,5 @@
+{{PropertyPage
+|SMWHasType=Boolean
+|PredicateClass=Property
+}}
+[[Category:dataspectsSystemCookbookOntology]]

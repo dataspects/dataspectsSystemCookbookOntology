@@ -1,0 +1,4 @@
+{{PropertyPage
+|SMWHasType=URL
+}}
+[[Category:dataspectsSystemCookbookOntology]]

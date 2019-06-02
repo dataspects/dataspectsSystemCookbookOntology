@@ -1,0 +1,4 @@
+{{PropertyPage
+|SMWHasType=Page
+}}
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>
