@@ -1,5 +1,5 @@
 {{PropertyPage
-|PropertyType=Text
+|SMWHasType=Text
 |HasEntityKeywords=Elastic
 }}
 [[Category:dataspectsSystemCookbookOntology]]
