@@ -1,8 +1,8 @@
 {{Annotation
 |AnnotationPredicate=ConcernsAspect
-|AnnotationObjects={{{ConcernsAspects|}}}
+|AnnotationObject={{{ConcernsAspects|}}}
 }}
 {{Annotation
 |AnnotationPredicate=IsCarriedOutByRole
-|AnnotationObjects={{{IsCarriedOutByRole|}}}
+|AnnotationObject={{{IsCarriedOutByRole|}}}
 }}<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>
