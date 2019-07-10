@@ -1,0 +1,7 @@
+{{{info|add title=New DataspectsSystemModule|edit title=Edit DataspectsSystemModule|page name=C<unique number;random;10>}}}
+
+{{FormHeader|DataspectsSystemModule}}
+{{StandardFormSections}}
+{{FormFooter}}
+
+<noinclude>[[Category:dataspectsSystemCookbookOntology]]</noinclude>
